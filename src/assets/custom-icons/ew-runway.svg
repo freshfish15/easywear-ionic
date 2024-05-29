@@ -1,0 +1,5 @@
+<svg class="ionicon" width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <title>ew-runway</title>
+<circle class="ionicon-fill-none" stroke-width="30px" stroke-linecap="round" stroke-linejoin="round"  cx="256" cy="256" r="224" transform="rotate(90 256 256)"/>
+<path class="ionicon-fill-none" stroke-width="30px" stroke-linecap="round" stroke-linejoin="round"  d="M187.098 209.047L159.327 152.601C151.38 136.447 168.797 119.589 184.285 128.443L393.484 248.035C405.734 255.038 405.734 272.962 393.484 279.965L184.285 399.557C168.797 408.411 151.38 391.553 159.327 375.399L187.098 318.953"/>
+</svg>

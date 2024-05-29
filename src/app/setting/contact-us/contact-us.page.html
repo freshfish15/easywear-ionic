@@ -1,0 +1,55 @@
+<!--<ion-header class="ion-no-border">-->
+<!--    <ion-toolbar color="#252856">-->
+<!--        <ion-title class="text-center" id="title">CONTACT US</ion-title>-->
+<!--        <ion-buttons slot="end">-->
+<!--            <ion-button (click)="dismiss()">-->
+<!--                <ion-icon name="close-circle-outline"-->
+<!--                    style="height: calc(3vh + 2vw); width: calc(3vh + 2vw); color: #FFFFFF;"></ion-icon>-->
+<!--            </ion-button>-->
+<!--        </ion-buttons>-->
+<!--    </ion-toolbar>-->
+<!--</ion-header>-->
+
+<ion-header class="ion-no-border">
+  <ion-toolbar style="padding:0 20px" class="header-toolbar">
+    <ion-buttons slot="start">
+      <ion-button><ion-icon></ion-icon></ion-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center header-title">CONTACT US</ion-title>
+    <ion-buttons slot="end" >
+      <ion-button (click)="dismiss()"><ion-icon size="large" src="/assets/custom-icons/ew-close.svg"></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [scrollY]="false">
+    <ion-item color="primary" style="height: 80%;" lines="none">
+        <p id="text">
+            EASTWEAR is an AR IOS app that offers a brand-new digital fashion experience to users,<br>
+            where users can:
+            <br><br>
+            a) Create a real-size digital avatar with digital fashion collections<br>
+            b) Try on the digital clothes in real-time through an Augmented Reality (AR) camera<br>
+            c) Watch virtual digital fashion runway<br><br>
+
+            Digital fashion is virtual clothing built using 3D software and computer technologies, which is visualized
+            and
+            stimulated to look like real garments. All digital collections in EasyWear are created in collaborations
+            with
+            Hong Kong fashion designers who want to exhibit their works in a digital way.
+            <br>
+        </p>
+    </ion-item>
+    <ion-item color="primary" lines="none">
+        <ion-buttons>
+          <ion-icon slot="icon-only" size="large" src="/assets/custom-icons/ew-instagram.svg/"></ion-icon>
+        </ion-buttons>
+        <ion-buttons>
+            <ion-icon slot="icon-only" size="large" src="/assets/custom-icons/ew-email.svg/"></ion-icon>
+        </ion-buttons>
+      <ion-buttons>
+        <ion-icon slot="icon-only" size="large" src="/assets/custom-icons/ew-whatsapp.svg/"></ion-icon>
+      </ion-buttons>
+    </ion-item>
+</ion-content>

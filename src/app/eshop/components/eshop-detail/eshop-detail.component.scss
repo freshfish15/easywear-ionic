@@ -1,0 +1,92 @@
+.item-detail-bg {
+  background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0.2) 0, rgba(255, 255, 255, 0.1), #252856, #252856, #252856 100%);
+}
+
+ion-button[shape=circle] {
+  --border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.product-image{
+  height:45vw;
+  object-fit: cover;
+}
+
+.btn {
+  background: transparent;
+  border-radius: 50%;
+  display: block;
+  height: 40px;
+  padding: 4px;
+  width: 40px;
+}
+
+.btn span {
+  border-radius: 40px;
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.btnSelected {
+  background-image: linear-gradient(to right, #E85722 0%, #5350AC 100%);
+}
+
+
+
+////////* Buttons *//////
+////------------------//
+//.button-align{
+//  display: flex;
+//  flex-direction: column;
+//  align-items: center;
+//  justify-content: center;
+//}
+//
+//.button-text {
+//  font-family: MontserratMedium;
+//  font-size: calc(11px + 1vw);
+//  letter-spacing: 0.05em;
+//  text-transform: none;
+//  display: flex;
+//  align-items: center;
+//  text-align: center;
+//  --color: #000;
+//}
+//
+//.button-white-outline {
+//  //width: 60vw;
+//  //height: 4.8vh;
+//  width: 80%;
+//  max-width: 350px;
+//  --color: #FFF;
+//  --background:var(--ion-color-primary);
+//  --background-hover: var(--ion-color-primary);
+//  --background-activated: var(--ion-color-primary);
+//  --background-focused: var(--ion-color-primary);
+//  --ripple-color: var(--ion-color-primary);
+//  --border-radius: 30px;
+//  --border-width: 1px;
+//  --border-style: solid;
+//  --border-color:#FFFFFF;
+//}
+//
+//.button-secondary-bg{
+//  //width: 80%;
+//  max-width: 350px;
+//  opacity: 0.9;
+//  --color: #FFF;
+//  --background: var(--ion-color-secondary);
+//  --background-hover: var(--ion-color-primary);
+//  --background-activated: var(--ion-color-primary);
+//  --background-focused: var(--ion-color-primary);
+//  --ripple-color: var(--ion-color-primary);
+//  --border-radius: 30px;
+//  --box-shadow: 0 4px 4px rgb(0, 0, 0, 0.25);
+//}
+//
+//
+//.no-scroll .scroll-content {
+//  overflow: hidden;
+//}

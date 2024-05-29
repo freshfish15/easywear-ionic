@@ -1,0 +1,51 @@
+#emailImg {
+  margin: auto;
+  height: 15vh;
+  width: 15vh;
+}
+
+#backSignin {
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 33vh;
+
+  height: 5vh;
+  width: 60vw;
+
+  --background: #6C6AEB;
+  --border-radius: 20px;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: calc(1.5vh + 1vw);
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #FFFFFF;
+}
+
+#modalTitle {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: calc(1.5vh + 1.5vw);
+  text-align: center;
+
+  color: #1F1D29;
+}
+
+#modalText {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: calc(1vh + 1.5vw);
+  align-items: center;
+  text-align: center;
+
+  color: #000000;
+  margin: 20px;
+}

@@ -1,0 +1,96 @@
+<!--<ion-header>-->
+<!--  <ion-toolbar color="easy_wear">-->
+<!--    <div class="flex flex-row mx-5 mt-5 content-center justify-center items-center">-->
+<!--      <img routerLink="/eshop" alt="back.svg" class="object-scale-down basis-1/6" src="../../assets/icon/back.svg"/>-->
+<!--      <h1 class="text-xl font-bold text-center basis-4/6">FITTING ROOM</h1>-->
+<!--      <div class="basis-1/6"></div>-->
+<!--    </div>-->
+<!--  </ion-toolbar>-->
+<!--</ion-header>-->
+
+<ion-header class="ion-no-border">
+  <ion-toolbar style="padding:0 20px" class="header-toolbar">
+    <ion-buttons slot="start">
+      <ion-button><ion-back-button color="light" icon="/assets/custom-icons/ew-back.svg"></ion-back-button></ion-button>
+      <ion-button><ion-icon size="large"></ion-icon></ion-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center header-title">FITTING ROOM</ion-title>
+    <ion-buttons slot="end" >
+      <ion-button><ion-icon></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg-color" color="easy_wear">
+  <div class="flex flex-row my-0">
+    <div class="basis-1/2">
+
+      <ion-text (click)="filter_M()" class="mx-10">
+        <p [ngClass]="{'underline selected' : !isFemaleFilter}" class="text-center">MEN({{GlobalComponent.shoppingCart_M_lens}}/20)</p>
+      </ion-text>
+    </div>
+    <div class="basis-1/2">
+      <ion-text (click)="filter_F()" class="mx-10">
+        <p [ngClass]="{'underline selected' : isFemaleFilter}" class="text-center">WOMEN({{GlobalComponent.shoppingCart_F_lens}}/20)</p>
+      </ion-text>
+    </div>
+  </div>
+
+  <div
+    *ngIf="(shoppingCart_M_lens!==0&&shoppingCart_M_lens!==1&&isFemale===false)||(shoppingCart_F_lens!==0&&shoppingCart_F_lens!==1&&isFemale===true); else emptyShoppingCart">
+    <div *ngFor="let item of shoppingCart; let i = index ; let first = first" class="min-w-0">
+      <div class="flex flex-col ">
+        <div  *ngIf="!first" class="basis-full min-w-0">
+          <app-fitting-room-item (removeSelf)="removeItem($event)" [arrayIndex]="i" [isFemale]="isFemaleFilter"
+                                 [itemData]="shoppingCart[i]"
+                                 class="min-w-0"></app-fitting-room-item>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ng-template #emptyShoppingCart>
+
+    <div class="flex flex-col grow items-center justify-center h-70v">
+      <div class="text-title text-center">
+        YOUR FITTING ROOM<br>IS EMPTY!
+      </div>
+      <div class="flex flex-row items-center justify-center p-1.5 grow">
+        <img [defaultImage]="defaultImage" [lazyLoad]="'../../assets/emptyFittingRoom.svg'"
+             alt="test_outfit.svg"
+             class="object-fill self-center"/>
+      </div>
+      <div class="my-0.5 px-2.5 whitespace-pre-warp text-center px-8 ">
+        Add digital looks to your AR fitting room by clicking the digital items.
+      </div>
+      <div class="flex flex-row items-center justify-center p-1.5 grow">
+        <a routerLink="/eshop"><img alt="AddtoFittingRoomBtn.svg" class="object-scale-down"
+                                    src="../../assets/button/selectNowBtn.svg"/></a>
+      </div>
+
+    </div>
+
+  </ng-template>
+  <div *ngIf="(shoppingCart_M_lens!==0&&shoppingCart_M_lens!==1&&isFemale===false)||(shoppingCart_F_lens!==0&&shoppingCart_F_lens!==1&&isFemale===true);"
+       class=" items-end">
+
+    <div class="button-align">
+      <ion-button class="button-white-outline button-text" id="addButton" shape="round" fill="none" (click)="goToAR()">
+        Go to AR World (Coming Soon)
+      </ion-button>
+      <ion-button (click)="removeAllItemAlert()"class="button-white-outline button-text" id="detailButton" shape="round" fill="none">
+        Remove All Items
+      </ion-button>
+    </div>
+<!--    <div class="flex flex-col">-->
+<!--      <div class="flex flex-row items-center justify-center p-1.5">-->
+<!--        <a><img alt="AddtoBagBtn.svg" class="object-scale-down" src="../../assets/button/gotoARWorld.svg"/></a>-->
+<!--      </div>-->
+<!--      <div mode="iOS" class="flex flex-row items-center justify-center p-1.5">-->
+<!--        <a (click)="removeAllItemAlert()"><img alt="AddtoFittingRoomBtn.svg" class="object-scale-down"-->
+<!--                                               src="../../assets/button/removeAllItem.svg"/></a>-->
+<!--      </div>-->
+<!--    </div>-->
+  </div>
+
+
+</ion-content>

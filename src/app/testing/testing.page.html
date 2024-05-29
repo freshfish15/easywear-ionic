@@ -1,0 +1,19 @@
+
+
+<!--<ion-content class="">-->
+<div class="cameraPreview" id="cameraPreview">
+
+  <div *ngIf="cameraActive">
+    <div class="image-overlay">
+
+      <div class="flex flex-col grow items-center justify-center">
+        Hold still, Show me your selfie
+        <img (click)="captureImage()" src="assets/button/takePhotoBtn.svg">
+      </div>
+    </div>
+  </div>
+</div>
+<!--<ion-img [src]="image" *ngIf="image && !cameraActive"></ion-img>-->
+<!--  <ion-button (click)="openCamera()" expand="full" *ngIf="!cameraActive"></ion-button>-->
+
+<!--</ion-content>-->

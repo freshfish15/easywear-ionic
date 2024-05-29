@@ -1,0 +1,43 @@
+<!--header part-->
+<ion-header class="ion-no-border">
+  <ion-toolbar class="header-toolbar">
+    <ion-button slot="start"><ion-icon></ion-icon></ion-button>
+    <ion-title class="ion-text-nowrap ion-text-center ion-no-padding header-title">Create by Entering Data</ion-title>
+    <ion-button slot="end" (click)="cancel()">
+      <ion-icon size="large" color="light" src="/assets/custom-icons/ew-close.svg"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg-color">
+
+
+<!--  <div class=" flex flex-col h-90v">-->
+<!--    <div class="items-start justify-start">-->
+<!--      <div class="flex flex-row justify-end items-end mt-5 mr-5">-->
+<!--        <a (click)="cancel()"> <img alt="Exit.svg" class="object-scale-down filter-white"-->
+<!--                                    src="assets/button/Exit.svg"/></a>-->
+<!--      </div>-->
+<!--    </div>-->
+
+<!--    <ion-title class="ion-text-center header-title font-bold">Create by entering data</ion-title>-->
+<div>
+    <div class="flex items-center justify-center grow ">
+      <img alt="Exit.svg" class="slide-img object-scale-down"
+           src="assets/Enter-data.png"/>
+    </div>
+
+    <div style="margin: 20px" class="text-center grow text-regular-15px">
+      Create your real-size avatar by entering your body measurements.
+    </div>
+
+    <div class="button-align">
+        <ion-button alt="goItBtn.svg" (click)="cancel()" fill="outline" class="ion-margin button-white-outline button-text" shape="round">
+          Got it
+        </ion-button>
+    </div>
+  </div>
+
+</ion-content>
+
+

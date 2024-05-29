@@ -1,0 +1,68 @@
+<!--header part-->
+<ion-header class="ion-no-border">
+  <ion-toolbar class="header-toolbar">
+    <ion-button slot="start"><ion-icon></ion-icon></ion-button>
+    <ion-title class="ion-text-nowrap ion-text-center ion-no-padding header-title">Create by capturing</ion-title>
+    <ion-button slot="end" (click)="cancel()">
+      <ion-icon size="large" color="light" src="/assets/custom-icons/ew-close.svg"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<!--  <div class=" flex flex-col h-90v">-->
+<!--    <div class="items-start justify-start">-->
+<!--      <ion-title class="ion-text-center header-title">Create by capturing</ion-title>-->
+<!--      <div class="flex flex-row justify-end items-end">-->
+<!--&lt;!&ndash;        <a (click)="cancel()" routerLink="/avatar"><img alt="Exit.svg" class="object-scale-down filter-white"&ndash;&gt;-->
+<!--&lt;!&ndash;                                    src="assets/button/Exit.svg"/></a>&ndash;&gt;-->
+<!--        <ion-button (click)="cancel()">-->
+<!--          <ion-icon size="large" color="light" src="/assets/custom-icons/ew-close.svg"></ion-icon>-->
+<!--        </ion-button>-->
+<!--      </div>-->
+<!--    </div>-->
+<ion-content class="bg-color" xmlns="http://www.w3.org/1999/html">
+<div>
+    <div class="flex items-center justify-center grow">
+      <ion-slides pager="false" [options]="slideOpts" class="slide-img">
+        <ion-slide>
+
+          <div class="flex flex-col">
+            <img alt="Exit.svg" class="object-fill"
+                 src="/assets/guildeline-1.png"/>
+          </div>
+
+        </ion-slide>
+        <ion-slide >
+
+          <div class="flex flex-col">
+            <img alt="Exit.svg" class="object-fill"
+                 src="/assets/guildeline-2.png"/>
+          </div>
+
+        </ion-slide>
+        <ion-slide>
+
+          <div class="flex flex-col">
+            <img alt="Exit.svg" class="object-fill"
+                 src="/assets/guildeline-3.png"/>
+          </div>
+        </ion-slide>
+      </ion-slides>
+  </div>
+
+    <div style="margin: 20px" class="text-center grow text-regular-15px">
+      Create your own real-size avatar with your face by capturing your face and body.
+    </div>
+
+  <div class="button-align">
+      <ion-button alt="goItBtn.svg" (click)="cancel()" fill="outline" class="ion-margin button-white-outline button-text" shape="round">
+        Got it
+      </ion-button>
+  </div>
+<!--    <div class="flex flex-row content-center justify-center items-center grow">-->
+<!--      <img alt="goItBtn.svg" (click)="cancel()"  src="assets/button/gotItBtn.svg" class="">-->
+<!--    </div>-->
+  </div>
+</ion-content>
+
+

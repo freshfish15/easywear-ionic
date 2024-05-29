@@ -1,0 +1,64 @@
+<!--header part-->
+<ion-header class="ion-no-border">
+  <ion-toolbar style="padding:0 20px" class="header-toolbar">
+    <ion-buttons slot="start"><ion-button>
+      <ion-back-button icon="/assets/custom-icons/ew-back.svg"></ion-back-button>
+    </ion-button></ion-buttons>
+    <ion-title class="ion-text-center header-title">MANAGE ACCOUNT</ion-title>
+    <ion-buttons slot="end" >
+      <ion-button [routerLink]="['./edit-profile/']"><ion-icon size="large" src="/assets/custom-icons/ew-edit.svg"></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [scrollY]="true" style="position: relative;">
+  <ion-label style="position: relative; left: 5%" class="text-semibold-15px">
+    Personal Information
+  </ion-label>
+
+  <!--  registered user profile-->
+  <ion-card class="account-card ion-padding-vertical">
+    <ion-item color="transparent" lines="none">
+      <ion-avatar slot="start" style="height: 60px; width: 60px;">
+        <img src="./assets/svg/AvatarF.svg" alt="HS"/>
+      </ion-avatar>
+      <ion-label color="light">
+        <p class="text-semibold-15px">{{this.username}}</p>
+        <p class="text-regular-12px">Registered in{{this.regin}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-card>
+
+<!--  profile details -->
+  <ion-card class="account-card-2" lines="none">
+    <ion-list style="background: transparent;">
+      <ion-item color="none" lines="none">
+        <ion-label color="light" >Email:
+          <p class="text-regular-12px">{{this.email}}</p></ion-label>
+      </ion-item>
+      <ion-item color="none" lines="none">
+        <ion-label color="light" >Tel:
+          <p class="text-regular-12px">{{this.phone}}</p></ion-label>
+      </ion-item>
+      <ion-item color="none" lines="none">
+        <ion-label color="light" >Address:
+          <p class="text-regular-12px">{{this.address}}</p></ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+<!--  App version info-->
+  <p class="text-regular-12px text-center">Version 1.01.1 (Update available)</p>
+
+<!--  Button part -->
+  <div class="button-align" style="padding-top: 30%;">
+    <ion-button  class="button-secondary-bg" id="logOut" expand="block" shape="round" (click)="logOut()">
+      <p class="button-text">Log Out</p>
+    </ion-button>
+
+    <ion-button class="button-secondary-bg" id="delete" expand="block" shape="round" (click)="delete()">
+      <p class="button-text">Delete account</p>
+    </ion-button>
+  </div>
+
+</ion-content>

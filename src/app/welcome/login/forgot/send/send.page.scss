@@ -1,0 +1,109 @@
+//icon controller
+ion-icon{
+    width: calc(30vw + 5vh);
+    height: calc(30vw + 5vh);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#text1 {
+    position: relative;
+    height: 6vh;
+    top: 10vh;
+    width: 80vw;
+    margin: 0 auto;
+
+    font-family: MontserratMedium;
+    font-size: calc(12px + 1vw);
+    line-height: 20px;
+    /* or 133% */
+
+    color: #FFFFFF;
+
+}
+#text3 {
+    position: relative;
+    height: 6vh;
+    top: 12vh;
+    width: 80vw;
+    margin: 0 auto;
+
+    text-decoration: underline;
+    font-family: MontserratMedium;
+    font-size: calc(12px + 1vw);
+    line-height: 20px;
+    /* or 133% */
+
+    color: #FFFFFF;
+
+}
+
+#text2 {
+    position: relative;
+    height: 6vh;
+    width: 75vw;
+    margin: 0 auto;
+    top: 25vh;
+
+    font-family:MontserratMedium;
+    font-size: calc(8px + 1vw);
+    line-height: 20px;
+    /* or 182% */
+
+    color: #FFFFFF;
+}
+
+//controller of the button
+.buttonsCon {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+//#signin {
+//    position: relative;
+//    width: 70vw;
+//    height: 5vh;
+//    top: 30vh;
+//
+//    opacity: 0.9;
+//
+//    --background: #6C6AEB;
+//    --background-hover: #9ce0be;
+//    --background-activated: #88f4be;
+//    --background-focused: #88f4be;
+//
+//    --color: #FFFFFF;
+//
+//    --border-color: #000;
+//    --border-style: solid;
+//    --border-width: 1px;
+//
+//    --box-shadow: 0 2px 6px 0 rgb(0, 0, 0, 0.25);
+//
+//    --ripple-color: deeppink;
+//
+//    --padding-top: 10px;
+//    --padding-bottom: 10px;
+//}
+
+#signinText {
+    position: absolute;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: calc(2vh + 0.8vw);
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.05em;
+
+    color: #FFFFFF;
+
+}

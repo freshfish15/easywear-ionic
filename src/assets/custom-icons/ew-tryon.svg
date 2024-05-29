@@ -1,0 +1,4 @@
+<svg class="ionicon" width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<circle class="ionicon-fill-none" stroke-width="30px" stroke-linecap="round" stroke-linejoin="round"  cx="256" cy="256" r="224"/>
+<path class="ionicon-fill-none" stroke-width="30px" stroke-linecap="round" stroke-linejoin="round"  d="M228.058 212.293L101.545 273.171C93.1109 276.293 77.0859 286.283 80.4596 301.268C84.6767 320 97.328 320 109.979 320C120.1 320 316.617 320 413.611 320C417.828 320 427.105 317.19 430.479 305.951C434.696 291.902 430.479 282.537 413.611 273.171C400.116 265.678 303.966 220.098 257.578 198.244V184.195C257.118 170.146 285.795 170.146 282.421 151.415C279.047 132.683 264.606 128 257.578 128C250.549 128 235.649 132.683 232.275 151.415" />
+</svg>

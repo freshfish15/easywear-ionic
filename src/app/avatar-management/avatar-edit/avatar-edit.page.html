@@ -1,0 +1,55 @@
+<!--header part-->
+<ion-header class="ion-no-border">
+  <ion-toolbar style="padding:0 20px" class="header-toolbar">
+    <ion-buttons slot="start"><ion-button>
+      <ion-back-button icon="/assets/custom-icons/ew-back.svg"></ion-back-button>
+    </ion-button></ion-buttons>
+    <ion-title class="ion-text-center header-title">EDIT AVATAR</ion-title>
+    <ion-buttons slot="end" >
+      <ion-button style="font-size: calc(1.5vh + 0.5vw);text-decoration: underline;" (click)="saveAlert()" id="saveContainer">SAVE</ion-button>
+    </ion-buttons></ion-toolbar>
+</ion-header>
+
+<ion-content [scrollY]="true" style="--background: black;">
+  <img id="avatar" src="/assets/icon/FullCL.png" />
+<!--  <img id="avatarBg" src="/assets/icon/editBg.png" />-->
+
+  <ion-list id="dataList">
+    <ion-button mode="ios" class="pickButtons" fill="none" (click)="openPicker(0)">
+      <div style="position: relative; margin: auto;">Height:</div>
+      <div style="position: relative; margin: auto;">{{dataSet[0]}}</div>
+      <div style="position: relative; margin: auto;">{{unit}}</div>
+    </ion-button>
+    <ion-button class="pickButtons" fill="none" (click)="openPicker(1)">
+      <div style="position: relative; margin: auto;">Weight:</div>
+      <div style="position: relative; margin: auto;">{{dataSet[1]}}</div>
+      <div style="position: relative; margin: auto;">{{unit2}}</div>
+    </ion-button>
+    <ion-button *ngFor="let item of items;" class="pickButtons" fill="none" (click)="openPicker(item.id)">
+      <div style="position: relative; margin: auto;">{{item.value}}</div>
+      <div style="position: relative; margin: auto;">{{dataSet[item.id]}}</div>
+      <div style="position: relative; margin: auto;">{{unit}}</div>
+    </ion-button>
+  </ion-list>
+
+  <ion-item lines="none" id="switchSet" >
+    <ion-button fill="none" id="cm" (click)="switchCm()"> cm/kg </ion-button>
+    <ion-button fill="none" id="inch" (click)="switchInch()">
+      inch/lbs
+    </ion-button>
+  </ion-item>
+</ion-content>
+
+<ion-footer class="text-center">
+  <ion-toolbar style="min-height: 0;
+  top: 0; --background: #252856;">
+    <ion-input id="nameInput" placeholder="Please enter your name" type="text">
+    </ion-input>
+    <div class="button-align">
+    <ion-button class="button-white-outline button-text" fill="none" (click)="deleteAlert()">
+      Delete Avatar
+    </ion-button>
+    </div>
+  </ion-toolbar>
+</ion-footer>
+

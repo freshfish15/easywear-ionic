@@ -1,0 +1,163 @@
+<!--header part-->
+<ion-header class="ion-no-border">
+  <ion-toolbar style="padding:0 20px" class="header-toolbar">
+<!--    <ion-buttons slot="start"><ion-button>-->
+<!--      <ion-back-button color="light" icon="/assets/custom-icons/ew-back.svg"></ion-back-button>-->
+<!--    </ion-button></ion-buttons>-->
+    <ion-button (click)="goBack()">
+      <ion-icon src="/assets/custom-icons/ew-back.svg" color="light" size="large"></ion-icon>
+    </ion-button>
+    <ion-title class="ion-text-center header-title">CREATE ACCOUNT</ion-title>
+    <ion-buttons slot="end" >
+      <ion-button><ion-icon></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [scrollY]="true" [fullscreen]="true">
+
+<form [formGroup]="ionicForm" novalidate class="ion-padding text-input-list">
+  <p  id="name" class="ion-margin-start ion-no-margin text-input-label">Name</p>
+  <ion-item mode="ios" lines="none" class="text-input-style ion-margin-horizontal ion-margin-bottom">
+    <ion-input id="nameInput" clearInput="true" required="true" formControlName="username" [(ngModel)]="username"></ion-input>
+  <div slot="error" class="message">Username is not available</div>
+  </ion-item>
+
+  <p id="email" class="ion-margin-start ion-no-margin text-input-label">Email</p>
+  <ion-item mode="ios" lines="none" class="text-input-style ion-margin-horizontal ion-margin-bottom">
+    <ion-input id="emailInput" clearInput="true" required="true" formControlName="email" [(ngModel)]="email" ></ion-input>
+    <div slot="error" class="message">Invalid email</div>
+  </ion-item>
+
+  <p id="pwd" class="ion-margin-start ion-no-margin text-input-label">Password</p>
+  <ion-item mode="ios" lines="none" class="text-input-style ion-margin-horizontal ion-margin-bottom">
+    <ion-input minlength="8" maxlength="15" required="true" id="pwdInput" [type]="showPwdUp ? 'text' : 'password'"
+               formControlName="password" [(ngModel)]="password"></ion-input>
+    <ion-icon slot="end" size="small" name="{{iconNameUp}}" id="Up" (click)="togglePwdUp()"></ion-icon>
+    <div slot="error" class="message">Password must be 8 to 15 characters and include at least one number and one letter</div>
+  </ion-item>
+
+  <p id="pwdConfirm" class="ion-margin-start ion-no-margin text-input-label">Confirm Password</p>
+  <ion-item mode="ios" lines="none" class="text-input-style ion-margin-horizontal ion-margin-bottom">
+    <ion-input required="true" id="pwdConfirmInput" [type]="showPwdDown ? 'text' : 'password'"
+               formControlName="passwordConfirm" [(ngModel)]="passwordConfirm"></ion-input>
+    <ion-icon slot="end" size="small" name="{{iconNameDown}}" id="Down" (click)="togglePwdDown()"></ion-icon>
+<!--  <div slot="error" class="message">Inconsistent password</div>-->
+  </ion-item>
+  <div class="errorText" *ngIf="checkSame(); else reset">
+    {{setError2()}}**Inconsistent password!</div>
+  <ng-template #reset>{{resetError2()}}</ng-template>
+
+  <ion-item lines="none" style="--background: transparent;">
+    <ion-checkbox color="secondary" mode="ios" slot="start" (click)="check()"></ion-checkbox>
+    <ion-label class="ion-text-wrap">
+      <p style=" font-family: MontserratMedium;color:#FFFFFF; font-size: 12px;">By registering you agree with our Terms & Conditions and Privacy Policy</p>
+    </ion-label>
+  </ion-item>
+
+<!--  button-part-->
+  <div class="button-align" style="padding-top: 30%;">
+    {{ableButton()}}
+    <ion-button  class="button-secondary-bg" id="create" expand="block" shape="round" (click)="createAccount()">
+      <p class="button-text">Create an account</p>
+      <ion-icon size="large" slot="start" src="assets/custom-icons/ew-lock.svg"></ion-icon>
+    </ion-button>
+
+    <ion-button class="button-secondary-bg" id="signin" [routerLink]="['../signin']" expand="block" shape="round">
+      <p class="button-text">Already have an account</p>
+    </ion-button>
+  </div>
+
+</form>
+
+<!--  <form [formGroup]="ionicForm" novalidate style="margin-left: auto">-->
+<!--    <ion-item class="input-item" lines="none">-->
+<!--      <ion-label class="input-label" id="name" position="stacked">Name</ion-label>-->
+<!--      <ion-input class="input-inner" id="nameInput" type="text" clearInput="true"-->
+<!--      formControlName="username" [(ngModel)]="username">-->
+<!--      </ion-input>-->
+<!--    </ion-item>-->
+
+<!--    <ion-item class="input-item" lines="none">-->
+<!--      <ion-label class="input-label" id="email" position="stacked">Email</ion-label>-->
+<!--      <ion-input class="input-inner" id="emailInput" type="email" clearInput="true"-->
+<!--      formControlName="email" [(ngModel)]="email">-->
+<!--      </ion-input>-->
+<!--    </ion-item>-->
+
+<!--    <ion-item class="input-item" lines="none">-->
+<!--      <ion-label class="input-label" id="pwd" position="stacked">Password</ion-label>-->
+<!--      <ion-input class="input-inner" id="pwdInput" [type]="showPwdUp ? 'text' : 'password'"-->
+<!--      formControlName="password" [(ngModel)]="password">-->
+<!--      </ion-input>-->
+<!--      <ion-icon name="{{iconNameUp}}" class="hide" id="Up" (click)="togglePwdUp()"></ion-icon>-->
+<!--    </ion-item>-->
+
+<!--    <ion-item class="input-item" lines="none">-->
+<!--      <ion-label class="input-label" id="pwdConfirm" position="stacked">ConfirmPassword</ion-label>-->
+<!--      <ion-input class="input-inner" id="pwdConfirmInput" [type]="showPwdDown ? 'text' : 'password'"-->
+<!--      formControlName="passwordConfirm" [(ngModel)]="passwordConfirm">-->
+<!--      </ion-input>-->
+<!--      <ion-icon name="{{iconNameDown}}" class="hide" id="Down" (click)="togglePwdDown()"></ion-icon>-->
+<!--    </ion-item>-->
+
+<!--    <ion-item class="input-item" lines="none">-->
+<!--      <ion-checkbox color="secondary" mode="ios" id="check" slot="start" (click)="check()"></ion-checkbox>-->
+<!--      <p class="agreementText">-->
+<!--        By registering you agree with our Terms & Conditions and Privacy Policy-->
+<!--      </p>-->
+<!--    </ion-item>-->
+<!--  </form>-->
+
+  <ng-template #tickTemplate>
+    <div>{{resetError()}}</div>
+    <div *ngIf="checkLength(); else untickTemplate">
+      <ion-item class="hintCon" lines="none">
+        <img class="tick" src="/assets/icon/Success.png">
+        <ion-label class="hintText">8 characters or more</ion-label>
+      </ion-item>
+    </div>
+    <ng-template #untickTemplate>
+      <ion-item class="hintCon" lines="none">
+        <img class="tick" src="/assets/icon/notick.png">
+        <ion-label class="hintText">8 characters or more</ion-label>
+      </ion-item>
+    </ng-template>
+
+    <div *ngIf="checkMix(); else untickTemplate2">
+      <ion-item class="hintCon" lines="none">
+        <img class="tick" src="/assets/icon/Success.png">
+        <ion-label class="hintText">Mix of upper & lowercase letters</ion-label>
+      </ion-item>
+    </div>
+    <ng-template #untickTemplate2>
+      <ion-item class="hintCon" lines="none">
+        <img class="tick" src="/assets/icon/notick.png">
+        <ion-label class="hintText">Mix of upper & lowercase letters</ion-label>
+      </ion-item>
+    </ng-template>
+
+    <div *ngIf="checkNum(); else untickTemplate3">
+      <ion-item class="hintCon" lines="none">
+        <img class="tick" src="/assets/icon/Success.png">
+        <ion-label class="hintText">Contains at least one number</ion-label>
+      </ion-item>
+    </div>
+    <ng-template #untickTemplate3>
+      <ion-item class="hintCon" lines="none">
+        <img class="tick" src="/assets/icon/notick.png">
+        <ion-label class="hintText">Contains at least one number</ion-label>
+      </ion-item>
+    </ng-template>
+  </ng-template>
+
+<!--  <div *ngIf="checkSame(); else reset">-->
+<!--    {{setError2()}}-->
+<!--    <ion-item color="primary" lines="none">-->
+<!--      <p id="errorText">**Inconsistent password!</p>-->
+<!--    </ion-item>-->
+<!--  </div>-->
+<!--  <ng-template #reset>{{resetError2()}}</ng-template>-->
+
+</ion-content>

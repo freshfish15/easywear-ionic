@@ -1,0 +1,35 @@
+<!--<ion-header>-->
+<!--  <ion-toolbar color="#252856">-->
+<!--    <ion-button color="#252856">-->
+<!--      <ion-back-button text="" icon="/assets/svg/back.svg"> </ion-back-button>-->
+<!--    </ion-button>-->
+<!--  </ion-toolbar>-->
+<!--</ion-header>-->
+
+<ion-header class="ion-no-border">
+  <ion-toolbar style="padding:0 20px" class="header-toolbar">
+    <ion-buttons slot="start"><ion-button>
+      <ion-back-button icon="/assets/custom-icons/ew-back.svg"></ion-back-button>
+    </ion-button></ion-buttons>
+    <ion-title></ion-title>
+    <ion-buttons slot="end" >
+      <ion-button><ion-icon></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [scrollY]="false" [fullscreen]="true">
+  <ion-icon src="/assets/svg/email.svg/"></ion-icon>
+  <div class="ion-text-center">
+    <p id="text1"> An e-mail has been sent to the following e-mail address:</p>
+    <p id="text3">{{email}}</p>
+    <p id="text2">Please check your email, we have sent you a link to reset your password. </p>
+  </div>
+  <!-- <app-send></app-send> -->
+  <!-- <p id="text3"></p> -->
+  <div class="button-align">
+  <ion-button style="position:relative; top:30vh;" class="button-secondary-bg" expand="block" shape="round" [routerLink]="['../../../signin']">
+    <ion-text class="button-text">Sign in</ion-text>
+  </ion-button>
+  </div>
+</ion-content>

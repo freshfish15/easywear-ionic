@@ -1,0 +1,210 @@
+
+////controller of input item and input
+.input-item2{
+  --background: var(--ion-color-primary);
+  color: #FFFFFF;
+  margin: 4vw 8vw 0 8vw;
+  border-bottom: 1px solid rgba(255,255, 255);
+  font-size: calc(8px + 1vw);
+
+  ion-label{
+    font-family: MontserratMedium;
+    font-size: calc(12px + 1vw);
+    color: #FFFFFF;
+  }
+}
+
+//controller of modal
+ion-modal {
+  --height: calc(45vh + 10vw);
+  --width: calc(40vw + 20vh);
+  --border-radius: 20px;
+  --box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+ion-modal::part(backdrop) {
+  background: rgba(0, 0, 0);
+  opacity: 1;
+}
+
+ion-modal ion-toolbar {
+  --background: #FFFFFF;
+  --color: white;
+  min-height: 5vh;
+  border-bottom: 0;
+}
+
+#emailImg {
+  margin: auto;
+  height: 15vh;
+  width: 15vh;
+}
+
+#backSignin {
+  margin: auto;
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 1vh;
+
+  height: 5vh;
+  width: 60vw;
+
+  --background: var(--ion-color-secondary);
+  --border-radius: 30px;
+
+  font-family: MontserratMedium;
+  font-size: calc(12px + 1vw);
+  letter-spacing: 0.05em;
+  text-transform: none;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  --color: #FFF;
+}
+
+#modalTitle {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: calc(1.5vh + 1.5vw);
+  text-align: center;
+
+  color: #1F1D29;
+}
+
+#modalText {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: calc(1vh + 1.5vw);
+  align-items: center;
+  text-align: center;
+
+  color: #000000;
+  margin: 20px;
+}
+
+//------Old css by Jason------//
+//ion-input{
+//    color: black;
+//    background: var(--ion-color-light);
+//    border-radius: 30px;
+//
+//    width: 100%;
+//    height: 100%;
+//    margin: auto;
+//    position: absolute;
+//    top: 10px;
+//
+//    font-size: calc(2vw + 0.5vh);
+//}
+
+
+
+//.innerInput{
+//    position: relative;
+//    height: 3vh;
+//    width: 85vw;
+//    bottom: 0;
+//
+//    --padding-end: 3vw;
+//    --padding-start: 3vw;
+//}
+
+//controller of input labels
+//.inputLabel {
+//    position: relative;
+//    left:6vw;
+//
+//    font-size: calc(12px + 1vw);
+//
+//    font-family: MontserratMedium;
+//    line-height: 1.5vh;
+//    /* or 113% */
+//
+//    display: flex;
+//    align-items: center;
+//    letter-spacing: -0.5px;
+//
+//    color: #FFFFFF;
+//}
+
+//controller of buttons
+//.buttonsCon {
+//    width: 100%;
+//    height: 100%;
+//    margin: auto;
+//    position: absolute;
+//    left: 0;
+//    right: 0;
+//
+//    --background: #6C6AEB;
+//    --background-hover: #9ce0be;
+//    --background-activated: #88f4be;
+//    --background-focused: #88f4be;
+//
+//    --color: #FFFFFF;
+//
+//    --border-color: #000;
+//    --border-style: solid;
+//    --border-width: 1px;
+//
+//    --box-shadow: 0 2px 6px 0 rgb(0, 0, 0, 0.25);
+//
+//    --ripple-color: deeppink;
+//
+//    --padding-top: 10px;
+//    --padding-bottom: 10px;
+//}
+//#changePwd {
+//    width: 75vw;
+//    height: 5vh;
+//    top: 60vh;
+//    opacity: 0.9;
+//}
+//#logOut {
+//    width: 75vw;
+//    height: 5vh;
+//    top: 68vh;
+//    opacity: 0.9;
+//}
+//#delete{
+//    width: 75vw;
+//    height: 5vh;
+//    top: 76vh;
+//    opacity: 0.9;
+//}
+
+//
+//#title {
+//    font-family: 'Montserrat';
+//    font-style: normal;
+//    font-weight: 700;
+//    font-size: calc(1.5vh + 1.2vw);
+//    line-height: 5vh;
+//    /* or 85% */
+//    align-items: center;
+//    letter-spacing: -0.5px;
+//    text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.5);
+//    color: #FFFFFF;
+//
+//    position: relative;
+//}
+
+// controller os buttons Text
+////#buttonText{
+////    color: #E9E9EE;
+////
+////    font-size: calc(1.5vh + 0.5vw);
+////    line-height: 1vh;
+////
+////    font-family: MontserratMedium;
+////    font-style: normal;
+////    font-weight: 500;
+////
+////    display: flex;
+////    align-items: center;
+////    text-align: center;
+////    letter-spacing: 0.05em;
+////}

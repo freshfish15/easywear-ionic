@@ -1,0 +1,105 @@
+<!--header part-->
+<ion-header class="ion-no-bo3rder">
+  <ion-toolbar style="padding:0 20px" class="header-toolbar">
+<!--    <ion-buttons slot="start">-->
+<!--    <ion-button><ion-back-button icon="/assets/custom-icons/ew-back.svg"></ion-back-button>-->
+<!--    </ion-button></ion-buttons>-->
+    <ion-button (click)="goBack()">
+      <ion-icon size="large" color="light" src="/assets/custom-icons/ew-back.svg" ></ion-icon>
+    </ion-button>
+    <ion-title class="ion-text-center header-title">SIGN IN</ion-title>
+    <ion-buttons slot="end" >
+      <ion-button><ion-icon></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<!--Input part-->
+<ion-content [scrollY]="true" [fullscreen]="true">
+<form [formGroup]="SignInForm">
+  <div class="ion-padding text-input-list">
+
+  <p id="email" class="ion-margin-start ion-no-margin text-input-label">Email</p>
+  <ion-item mode="ios" lines="none" class="text-input-style ion-margin-horizontal ion-margin-bottom">
+    <ion-input type="email" id="emailInput" required="true" clearInput="true" formControlName="email" [(ngModel)]="email" ></ion-input>
+    <div slot="error">Invalid email</div>
+  </ion-item>
+
+    <p id="pwd" class="ion-margin-start ion-no-margin text-input-label">Password</p>
+    <ion-item mode="ios" lines="none" class="text-input-style ion-margin-horizontal ion-margin-bottom">
+      <ion-input required="true" id="pwdInput" [type]="showPwd ? 'text' : 'password'" formControlName="password" [(ngModel)]="password" ></ion-input>
+      <ion-icon slot="end" size="small" name="{{iconName}}" (click)="togglePwd()"></ion-icon>
+      <div slot="error">Password must be 8 to 15 characters and include at least one number and one letter</div>
+    </ion-item>
+  </div>
+
+
+<!--  <ion-item class="input-item" lines="none">-->
+<!--    <ion-label color="secondary" class="input-label" id="email" position="stacked">Email</ion-label>-->
+<!--    <ion-input class="input-inner" type="email" clearInput="true" id="emailInput" [(ngModel)]="email">-->
+<!--    </ion-input>-->
+<!--  </ion-item>-->
+
+<!--  <ion-item class="input-item" lines="none">-->
+<!--    <ion-label color="secondary" class="input-label" id="pwd" position="stacked">Password</ion-label>-->
+<!--    <ion-input [type]="showPwd ? 'text' : 'password'" class="input-inner" id="pwdInput" [(ngModel)]="password">-->
+<!--    </ion-input>-->
+<!--    <ion-icon name={{iconName}} id="hide" (click)="togglePwd()" slot="end"></ion-icon>-->
+<!--  </ion-item>-->
+
+<!--   <img src="/assets/icon/Hide.png" id="hide" (click)="togglePwd()" slot="end" /> -->
+
+  <!-- <ion-checkbox id="check"></ion-checkbox>
+  <ion-label class="label" id="rmbMe">
+    Remember me
+  </ion-label> -->
+
+<!--  button part-->
+  <div class="button-align">
+  {{checkFill()}}
+  <ion-button  class="button-secondary-bg" id="signinButton" expand="block" shape="round" (click)="signin()">
+    <p class="button-text">Sign in</p>
+  </ion-button>
+
+
+
+
+
+  <ion-button id="forgot" fill="clear" [routerLink]="['../forgot']">
+    <p id="forgotText">Forgot your password?</p>
+  </ion-button>
+  <div class="text-center">
+    <p id="socialAccountText">Or sign up with social account</p>
+  </div>
+
+    <ion-grid class="iconCon">
+      <ion-row>
+        <ion-col><img id="google" src="/assets/icon/google.png" (click)="signinAlert()" /></ion-col>
+        <ion-col><img id="facebook" src="/assets/icon/facebook.png"/></ion-col>
+        <ion-col><img id="wechat" src="/assets/icon/Wechat.png" /></ion-col>
+      </ion-row>
+    </ion-grid>
+
+  <ion-button class="button-secondary-bg"  [routerLink]="['../create']" expand="block" shape="round">
+    <p class="button-text">Create an account</p>
+  </ion-button>
+  </div>
+</form>
+</ion-content>
+
+<!--  <div class="buttonsCon">-->
+<!--    {{checkFill()}}-->
+<!--      <ion-button id="signinButton" expand="block" shape="round" (click)="signin()">-->
+<!--        <p class="button-text" >Sign in</p>-->
+<!--      </ion-button>-->
+<!--    <ion-button id="forgot" fill="clear" [routerLink]="['../forgot']">-->
+<!--      <p id="forgotText">Forgot your password?</p>-->
+<!--    </ion-button>-->
+<!--    <div class="text-center">-->
+<!--      <p id="socialAccountText">Or sign up with social account</p>-->
+<!--    </div>-->
+<!--    <ion-button expand="block" id="createButton" [routerLink]="['../create']" shape="round">-->
+<!--      <p class="button-text">Create an account</p>-->
+<!--    </ion-button>-->
+<!--  </div>-->
+

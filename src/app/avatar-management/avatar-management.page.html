@@ -1,0 +1,127 @@
+<!--header part-->
+<!--<ion-header class="ion-no-border">-->
+<ion-header>
+  <ion-toolbar style="padding:0 20px" class="header-toolbar">
+    <ion-buttons slot="start">
+      <ion-button routerLink="/setting"><ion-icon color="light" size="large" src="/assets/custom-icons/ew-setting.svg"></ion-icon></ion-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center header-title">Manage Avatars</ion-title>
+    <ion-buttons slot="end" >
+      <ion-button routerLink="/fitting-room" class="circleButton" shape="round"><ion-icon size="large" src="/assets/custom-icons/ew-vr-fitting.svg"></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="RefreshAvList($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+
+  <img class="avatar-bg" src="/assets/icon/avatarBg.png"/>
+  <div>
+    <div *ngIf="viewCustomize">
+      <img class="avatar-FullBody" src="/assets/icon/FullCL.png" />
+    </div>
+    <div *ngIf="viewMan">
+      <img class="avatar-FullBody" src="/assets/icon/FullML.png" />
+    </div>
+    <div *ngIf="viewWoman">
+      <img class="avatar-FullBody" src="/assets/icon/FullFL.png" />
+    </div>
+  </div>
+
+
+
+
+
+  <ion-grid class="avatar-Grid">
+
+    <ion-row   class="avatar-row" style="padding-left: 50px" size="5">
+      <div *ngFor="let item of result; let i = index; let even = even">
+<!--        <ion-col class="avatar-col"  size="3">-->
+        <div *ngIf="result[i]['gender']==='m'" class="avatar-icon">
+          <img class="avatar-button " src={{this.avatarM}} (click)="toggleMan(i)" />
+        </div>
+<!--        </ion-col>-->
+        <div *ngIf="result[i]['gender']==='f'" class="avatar-icon">
+          <img class="avatar-button " src={{this.avatarF}} (click)="toggleWoman(i)" />
+        </div>
+      </div>
+    </ion-row>
+
+  </ion-grid>
+
+  <div class="button-align" style="position: relative; top:53vh; padding-bottom: 100px">
+  <ion-button class="button-white-outline button-text" id="addButton" shape="round" fill="none" [routerLink]="['/avatar']" router-direction="none" >
+    <ion-icon size= "large" src="/assets/custom-icons/ew-add.svg" id="addIcon"></ion-icon>
+    Add Avatar
+  </ion-button>
+  <ion-button class="button-white-outline button-text" id="detailButton" shape="round" fill="none" (click)="navigateToAvatarDetail()">
+    {{this.detail()}}
+  </ion-button>
+  </div>
+
+<!--  tabs part-->
+  <ion-tabs class="floatingbar">
+
+    <div class="flex flex-row items-center justify-center grow">
+      <a class="basis-1/4" routerLink="/eshop">
+        <div class="flex flex-col items-center justify-center filter-orange">
+          <ion-icon size="large" src="/assets/custom-icons/ew-home.svg"></ion-icon>
+          <ion-label>Home</ion-label>
+        </div>
+      </a>
+
+      <a class="basis-1/4" routerLink="/avatar">
+        <div class="flex flex-col items-center justify-center">
+          <ion-icon size="large" src="/assets/custom-icons/ew-AR.svg"></ion-icon>
+          <ion-label>AR World</ion-label>
+        </div>
+      </a>
+      <a class="basis-1/4" routerLink="/avatar-management">
+        <div class="flex flex-col items-center justify-center">
+          <ion-icon color="tertiary" size="large" src="/assets/custom-icons/ew-avatar.svg"></ion-icon>
+          <ion-label color="tertiary">Avatar</ion-label>
+        </div>
+      </a>
+<!--      <a class="basis-1/4">-->
+<!--        <div class="flex flex-col items-center justify-center">-->
+<!--          <ion-icon size="large" src="/assets/custom-icons/ew-shopping.svg"></ion-icon>-->
+<!--          <ion-label>Bag</ion-label>-->
+<!--        </div>-->
+<!--      </a>-->
+
+    </div>
+  </ion-tabs>
+</ion-content>
+
+
+ <!--  <ion-tabs>-->
+<!--    <div class="flex flex-row items-center justify-center">-->
+<!--      <a class="basis-1/4" routerLink="/avatar">-->
+<!--        <div class="flex flex-col items-center justify-center filter-orange">-->
+<!--          <ion-icon src="../../assets/svg/Home.svg"></ion-icon>-->
+<!--          <ion-label>Home</ion-label>-->
+<!--        </div>-->
+<!--      </a>-->
+<!--      <a class="basis-1/4" routerLink="/avatar">-->
+<!--        <div class="flex flex-col items-center justify-center">-->
+<!--          <ion-icon src="../../assets/svg/ARworld.svg"></ion-icon>-->
+<!--          <ion-label>AR World</ion-label>-->
+<!--        </div>-->
+<!--      </a>-->
+<!--      <a class="basis-1/4" routerLink="/avatar">-->
+<!--        <div class="flex flex-col items-center justify-center">-->
+<!--          <ion-icon src="../../assets/svg/Avator.svg"></ion-icon>-->
+<!--          <ion-label>Avator</ion-label>-->
+<!--        </div>-->
+<!--      </a>-->
+<!--      <a class="basis-1/4" routerLink="/avatar">-->
+<!--        <div class="flex flex-col items-center justify-center">-->
+<!--          <ion-icon src="../../assets/svg/ShoppingBag.svg"></ion-icon>-->
+<!--          <ion-label>Bag</ion-label>-->
+<!--        </div>-->
+<!--      </a>-->
+<!--    </div>-->
+<!--  </ion-tabs>-->

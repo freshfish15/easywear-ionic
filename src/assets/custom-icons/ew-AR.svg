@@ -1,0 +1,6 @@
+<svg class="ionicon" width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <title>ew-AR-outline</title>
+  <circle cx="256" cy="256" r="224" class="ionicon-fill-none" stroke-width="30px" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M128 352L204.19 160L280 352" class="ionicon-fill-none" stroke-width="30px" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M256 160.188C288 160.186 313.345 158.673 331.97 164.261C355.526 171.328 368 184.733 368 202.853C368 235.301 328 245.518 304 245.518L352 352" class="ionicon-fill-none" stroke-width="20px" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

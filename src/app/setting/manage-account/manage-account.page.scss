@@ -1,0 +1,121 @@
+// controller of ion-card
+.account-card {
+  border-radius: 15px;
+  width: 90vw;
+  padding-top: 10px;
+  margin: 10px auto 10px auto;
+  --ion-item-background: rgba(0, 0, 0, 0.2);
+}
+
+.account-card-2{
+  border-radius: 15px;
+  width: 90vw;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  --ion-item-background: rgba(0, 0, 0, 0.2);
+  margin: 10px auto 10px auto;
+}
+
+#logOut {
+  width: 75vw;
+  height: 5vh;
+  top: 60vh;
+  opacity: 0.9;
+}
+
+#delete {
+  width: 75vw;
+  height: 5vh;
+  top: 68vh;
+  opacity: 0.9;
+}
+
+//------Old code by Jason------//
+////controllers of buttons
+//.buttonsCon {
+//  width: 100%;
+//  height: 100%;
+//  margin: auto;
+//  position: absolute;
+//  left: 0;
+//  right: 0;
+//
+//  --background: #6C6AEB;
+//  --background-hover: #9ce0be;
+//  --background-activated: #88f4be;
+//  --background-focused: #88f4be;
+//
+//  --color: #FFFFFF;
+//
+//  --border-color: #000;
+//  --border-style: solid;
+//  --border-width: 1px;
+//
+//  --box-shadow: 0 2px 6px 0 rgb(0, 0, 0, 0.25);
+//
+//  --ripple-color: deeppink;
+//
+//  --padding-top: 10px;
+//  --padding-bottom: 10px;
+//}
+
+////controller os buttons Text
+//#buttonText {
+//  color: #E9E9EE;
+//
+//  font-size: 15px;
+//  line-height: 1vh;
+//
+//  font-family: 'Montserrat';
+//  font-style: normal;
+//  font-weight: 500;
+//
+//  display: flex;
+//  align-items: center;
+//  text-align: center;
+//  letter-spacing: 0.05em;
+//}
+//.account-label{
+// font-family: MontserratSemiBold;
+//  font-size: calc(12px + 1vw);
+//  position: relative;
+//  left:5%;
+//}
+//#userDetail {
+//  position: relative;
+//  top: 5vh;
+//  font-family: MontserratMedium;
+//  font-size: calc(12px + 1vw);
+//  line-height: 3vh;
+//  color: #FFFFFF;
+//}
+//
+//#userDetail2 {
+//  position: relative;
+//  top: 5.5vh;
+//  font-family: MontserratRegular;
+//  font-size: calc(8px + 1vw);
+//  line-height: 2vh;
+//  color: #999999;
+//}
+////controller of the second item
+//.userDetail3 {
+//  position: relative;
+//  width: 80vw;
+//  height: 5vh;
+//  --color: #FFFFFF;
+//  font-family: MontserratMedium;
+//  font-size: calc(10px + 1vw);
+//}
+//#title {
+//  font-family: 'Montserrat';
+//  font-style: normal;
+//  font-weight: 700;
+//  font-size: calc(2vh + 1.2vw);
+//  line-height: 5vh;
+//  /* or 85% */
+//  align-items: center;
+//  letter-spacing: -0.5px;
+//  text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.5);
+//  color: #FFFFFF;
+//}

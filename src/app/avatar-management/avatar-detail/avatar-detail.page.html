@@ -1,0 +1,76 @@
+<!--header-part-->
+<ion-header class="ion-no-border">
+  <ion-toolbar style="padding:0 10px" class="header-toolbar">
+    <ion-buttons slot="start">
+      <ion-button><ion-back-button color="light" icon="/assets/custom-icons/ew-back.svg"></ion-back-button></ion-button>
+      <ion-button><ion-icon size="large"></ion-icon></ion-button>
+   </ion-buttons>
+    <ion-title class="ion-text-center header-title">AVATAR'S DETAILS</ion-title>
+    <ion-buttons slot="end" >
+      <ion-button id="download" (click)="exportAlert()"><ion-icon size="large" src="/assets/custom-icons/ew-download.svg"></ion-icon></ion-button>
+      <ion-button id="edit" [routerLink]="['../../avatar-edit']"><ion-icon size="large" src="/assets/custom-icons/ew-edit.svg"></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="--background: black">
+  <img class="avatar" src="{{whichType()}}"/>
+<!--  <img class="avatar-Bg" src="/assets/icon/editBg.png" />-->
+
+  <!-- <div class="collapse-wrapper" [class.collapsed]="!expanded">
+    <div class="collapse-header" (click)="expanded=!expanded">
+      <span>{{header}}</span>
+      <ion-icon name="chevron-forward-outline" *ngIf="!expanded"></ion-icon>
+      <ion-icon name="chevron-down-outline" *ngIf="expanded"></ion-icon>
+    </div>
+    <div class="collapse-body">
+      <div class="collapse-body-content">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ducimus assumenda voluptas tempora vero recusandae dolorem non quasi obcaecati deleniti. Optio accusamus velit nobis modi ad nam quas fuga deserunt?</p>
+      </div>
+    </div>
+  </div> -->
+
+  <ion-grid id="bodyList">
+    <ion-row class="rows" *ngFor="let index of [0,1,2,3,4,5,6,7,8,9,10];">
+      <ion-fab>
+        <ion-fab-button class="fabButtons">
+          <img class="images" src="/assets/icon/{{prefix()}}{{index}}.png/"/>
+        </ion-fab-button>
+        <ion-fab-list id="jumpList" side="start">
+          <ion-fab-button id="jumpText">
+            <div id="arrowContainer">
+              <img id="arrow" src="/assets/svg/Next.svg"/>
+            </div>
+            <div id="textContainer">
+              <p id="text">{{this.items[index].value}}{{this.items[index].number}}</p>
+            </div>
+          </ion-fab-button>
+        </ion-fab-list>
+      </ion-fab>
+    </ion-row>
+  </ion-grid>
+
+  <div style="position: relative;top: 13vh;">
+  <ion-item lines="none" id="switchSet">
+    <ion-icon id="scrollDown" src="/assets/svg/Scroll down.svg"></ion-icon>
+    <ion-button fill="none" id="cm" (click)="switchCm()"> cm/kg </ion-button>
+    <ion-button fill="none" id="inch" (click)="switchInch()">inch/lbs</ion-button>
+  </ion-item>
+
+  <ion-item lines="none" id="userDetail">
+    <p> {{this.avatarName}} | {{this.height}} {{this.unitHeight}} | {{this.weight}} {{this.unitWeight}}</p>
+    <!-- <p>Last Modified: {{this.lastModified}}</p> -->
+  </ion-item>
+  </div>
+</ion-content>
+
+<ion-footer class="text-center">
+  <ion-toolbar style="min-height: 8vh; top: 0; --background: #252856">
+    <div class="button-align" *ngIf="this.custom">
+      <ion-button  class="button-white-outline button-text" fill="none" (click)="deleteAlert()">
+        Delete Avatar
+      </ion-button>
+    </div>
+  </ion-toolbar>
+</ion-footer>
+

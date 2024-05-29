@@ -1,0 +1,185 @@
+:root{
+  --cmColor: #6C6AEB;
+  --cmBg: rgba(108, 106, 235, 0.2);
+  --cmBorder: 2px solid #6C6AEB;
+  --inchColor: #FFFFFF;
+  --inchBg: rgba(255, 255, 255, 0.2);
+  --inchBorder:1px solid #FFFFFF;
+}
+
+#header {
+  color: #FFFFFF;
+  font-size: calc(2vh + 1vw);
+}
+#saveContainer{
+  width: 7vh;
+  height: 7vh;
+}
+#save{
+  position: relative;
+  color: #FFFFFF;
+  font-size: calc(1.5vh + 1vw);
+  line-height: 7vh;
+  text-decoration: underline;
+}
+#avatar {
+  position: relative;
+  top: 5vh;
+  height: 57vh;
+  width: 40vh;
+  right: 10%;
+}
+#avatarBg {
+  position: relative;
+  bottom: 5vh;
+}
+
+#dataList {
+  background: transparent;
+  position: absolute;
+  width: 40vw;
+  height: 80vh;
+  right: 2vh;
+  top: 3vh;
+}
+
+//controller of righthand side measurements
+.measurements {
+  --background: transparent;
+  position: relative;
+  display: block;
+  top: 5vh;
+  height: 4vh;
+  margin-bottom: 10px;
+  border: 1px solid #FFFFFF;
+  border-radius: 30px;
+}
+
+//controller of inside labels
+.texts {
+  font-size: calc(1.4vh + 0.5vw);
+}
+
+//controller of inside inputs
+.inputs {
+  font-size: calc(1.2vh + 0.5vw);
+}
+
+//controller of delete button
+#deleteButton {
+  position: relative;
+  --background: transparent;
+  border-width: 1px;
+  border-radius: 3vh;
+  width: 50vw;
+  height: 5vh;
+  font-size: calc(1.5vh + 1vw);
+}
+
+//controller of nameInput
+#nameInput {
+  color: gray;
+  background: #F2F2F2;
+  border-radius: 30px;
+
+  height: 5vh;
+  width: 80vw;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  margin-left: auto;
+  margin-right: auto;
+  right: 0;
+  left: 0;
+
+  font-size: calc(1.5vh + 1vw);
+}
+
+//controller of switch cm and inch
+#switchSet {
+  //bottom: 10%;
+  //left: 10%;
+  position: relative;
+  top: 13vh;
+  --background: transparent;
+}
+
+#cm {
+  position: relative;
+  height: 5vh;
+  width: 15vw;
+  border-radius: 5vw 0px 0px 5vw;
+  font-size: 12px;
+  // color: var(--cmColor);
+  // background: var(--cmBg);
+  // border:var(--cmBorder);
+}
+
+#inch {
+  position: relative;
+  height: 5vh;
+  width: 15vw;
+  border-radius: 0px 5vw 5vw 0px;
+  font-size: 12px;
+  // color: var(--inchColor);
+  // background: var(--inchBg);
+  // border:var(--inchBorder);
+}
+
+//controller of rightside buttons
+.pickButtons {
+  position: relative;
+
+  width: 38vw;
+  height: 4vh;
+
+  --background: transparent;
+  border-color: #FFFFFF;
+  border-width: 1px;
+  border-radius: 30px;
+  text-transform: none;
+  font-size: calc(9px + 1vw);
+}
+
+@media (min-width:700px) {
+  #avatar {
+    position: relative;
+    top: 10vh;
+    height: 57vh;
+    width: 40vh;
+    right: 0;
+    z-index: 0;
+  }
+
+  #avatarBg {
+    position: relative;
+    left: 10vw;
+    z-index: 99;
+  }
+
+  #switchSet {
+    bottom: 0;
+    left: 0;
+    --background: transparent;
+  }
+  #cm {
+    position: relative;
+    height: 5vh;
+    width: 15vw;
+    color: #FFFFFF;
+    border-radius: 5vw 0px 0px 5vw;
+
+    font-size: calc(1.2vh + 1vw);
+    left: 9vw;
+  }
+
+  #inch {
+    position: relative;
+    height: 5vh;
+    width: 15vw;
+    color: #FFFFFF;
+    border-radius: 0px 5vw 5vw 0px;
+
+    font-size: calc(1.2vh + 1vw);
+    left: 9vw;
+  }
+}

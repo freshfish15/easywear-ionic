@@ -1,0 +1,74 @@
+<!--header part-->
+<ion-header class="ion-no-border">
+  <ion-toolbar style="padding:0 20px" class="header-toolbar">
+   <ion-buttons slot="start"><ion-button>
+      <ion-back-button icon="/assets/custom-icons/ew-back.svg"></ion-back-button>
+   </ion-button></ion-buttons>
+    <ion-title class="ion-text-center header-title">EDIT PROFILE</ion-title>
+    <ion-buttons slot="end" >
+      <ion-button id="save" style="font-size: calc(1.5vh + 0.5vw); text-decoration: underline;" (click)="changeInfo()">SAVE</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<!--Edit profile-->
+<ion-content [scrollY]="true" [fullscreen]="true">
+
+  <ion-item mode="ios" class="input-item2" lines="none">
+    <ion-label position="stacked" color="secondary">Name</ion-label>
+    <ion-input placeholder="Enter Name" value="{{this.username}}" id="nameInput" [clearInput]="true" [(ngModel)]="username"></ion-input>
+  </ion-item>
+
+  <ion-item mode="ios" class="input-item2" lines="none">
+    <ion-label position="stacked" color="secondary">Email address</ion-label>
+    <ion-input [readonly]="true" value="{{this.email}}" id="emailInput"[clearInput]="true" [(ngModel)]="email"></ion-input>
+  </ion-item>
+
+  <ion-item mode="ios" class="input-item2" lines="none">
+    <ion-label position="stacked" color="secondary">Phone number</ion-label>
+    <ion-input placeholder="Enter phone number" id="phoneInput" clearInput="true" [(ngModel)]="phone"></ion-input>
+  </ion-item>
+
+  <ion-item mode="ios" class="input-item2" lines="none">
+    <ion-label position="stacked" color="secondary">Address</ion-label>
+    <ion-input placeholder="Enter address" id="addressInput" clearInput="true" [(ngModel)]="address"></ion-input>
+  </ion-item>
+
+<!--Button profile-->
+  <div class="button-align" style="padding-top: 30%;">
+    <ion-button  class="button-secondary-bg" id="changePwd" expand="block" shape="round" [routerLink]="['./change-password']">
+      <p class="button-text">Change Password</p>
+    </ion-button>
+
+    <ion-button  class="button-secondary-bg" id="logOut" expand="block" shape="round" (click)="logOutAlert()">
+      <p class="button-text">Log Out</p>
+    </ion-button>
+
+    <ion-button class="button-white-bg" expand="block" id="delete" shape="round" (click)="deleteAlert()">
+      <p class="button-text">Delete account</p>
+    </ion-button>
+  </div>
+</ion-content>
+
+
+<!--Email Modal profile-->
+<ion-modal *ngIf="isValid()" #modal trigger="save">
+  <ng-template>
+    <ion-header class="ion-no-border">
+      <ion-toolbar style="padding-right:10px;">
+        <ion-icon src="/assets/svg/Close.svg" slot="end" style="color: black;
+        height: 3vh; width: 3vh;"
+        (click)="this.modal.dismiss(null, 'cancel');"></ion-icon>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content [scrollY]="false" style="--background: #FFFFFF;">
+      <h1 id="modalTitle"> PLEASE VERIFY YOUR EMAIL </h1>
+      <img id="emailImg" src="/assets/icon/email sent.png/">
+      <p class="text-center" id="modalText">
+        We have sent email to <a style="color: #6C6AEB;">{{this.email}}</a> to confirm the validity of email address.
+        After receiving the email follow the link provided to complete you registration.</p>
+      <ion-button id="backSignin" [routerLink]="['/welcome/login/']"
+      (click)="this.modal.dismiss(null, 'cancel');">Back to log in</ion-button>
+    </ion-content>
+  </ng-template>
+</ion-modal>

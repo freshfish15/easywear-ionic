@@ -1,0 +1,39 @@
+<ion-card *ngIf="itemData" class="m-2.5 shadow-none" color="easy_wear">
+  <div class="flex flex-row justify-center">
+    <div class="flex flex-row justify-end basis-1/6 grow">
+      <a  class="">
+        <img src="{{this.itemData.image_path}}"  alt="test_outfit.svg"
+             class="object-scale-down"/>
+      </a>
+    </div>
+
+
+    <div class="flex flex-col justify-center my-3.5 min-w-0 basis-2/6 grow">
+<!--      <div class="my-0.5 truncate  px-2.5 font-bold">-->
+<!--        {{itemData.name}}-->
+<!--      </div>-->
+      <div class="my-0.5 truncate  px-2.5 font-bold">
+        {{itemData.name}}
+      </div>
+      <div class="my-0.5 truncate  px-2.5 fitting-room-item-brandname font-bold">
+        {{itemData.brand}}
+      </div>
+      <div class="my-0.5 truncate  px-2.5 font-bold">
+        HKD {{itemData.price}}
+      </div>
+
+    </div>
+
+    <div class="flex flex-col justify-center my-3.5 mx-1.5 basis-1/6 grow">
+
+      <div (click)="removeItemAlert()" class="my-0.5 truncate text-center px-2.5 removeBtn">
+        Remove
+      </div>
+
+
+    </div>
+    <div class="flex flex-col justify-center basis-1/48 grow">
+    </div>
+  </div>
+
+</ion-card>

@@ -1,0 +1,7 @@
+<ion-content id="outerContent" [scrollY]="true">
+    <ion-img src="assets/icon/Easywear_logo.png" alt="Easywear_logo"> </ion-img>
+    <ion-button (click)="login()" shape="round" style="position: relative; top: -30%"> go login</ion-button>
+    <ion-button id="openSetting" shape="round" style="position: relative; top: -30%"
+    (click)="openModalSetting()"> go setting</ion-button>
+    <ion-button [routerLink]="['../avatar-management']" shape="round" style="position: relative; top: -30%"> go avatar</ion-button>
+</ion-content>

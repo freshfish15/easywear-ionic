@@ -1,0 +1,8 @@
+{
+  "name": "Easywear To Buy",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

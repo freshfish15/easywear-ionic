@@ -1,0 +1,20 @@
+<!-- <ion-header class="ion-no-border">
+  <ion-toolbar class="ion-no-border" style="--background: #ffffff; min-height: 5vh">
+    <ion-icon src="/assets/svg/Close.svg" slot="end" style="color: black; height: 3vh; width: 3vh"
+      (click)="this.cancel();"></ion-icon>
+  </ion-toolbar>
+</ion-header> -->
+<ion-content [scrollY]="false" style="--background: #ffffff" [fullscreen]="true">
+  <div>
+    <ion-icon src="/assets/svg/Close.svg" style="position: relative ;height: 3vh; width: 3vh; left: 290px; top: 5px"
+    (click)="this.cancel();"></ion-icon>
+  </div>
+  <h1 id="modalTitle">PLEASE VERIFY YOUR EMAIL</h1>
+  <img id="emailImg" src="/assets/icon/email sent.png/" />
+  <p class="text-center" id="modalText">
+    We have sent email to <a style="color: #6c6aeb">{{this.email}}</a> to
+    confirm the validity of email address. After receiving the email follow
+    the link provided to complete you registration.
+  </p>
+  <ion-button id="backSignin" (click)="this.cancel();">OK</ion-button>
+</ion-content>

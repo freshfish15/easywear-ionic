@@ -1,0 +1,58 @@
+<ion-card class="eshop-item-card" [ngClass]="{'border-gradient': (this.itemClicked)}">
+  <div>
+  <div (click)="toggleClickedItem()" class="flex flex-row justify-end item-card-icon">
+  <img (click)="addToFittingRoomDirectly(this.productData)" alt="testClothes.svg" class="object-scale-down" src="assets/icon/try-on.svg"/>
+<!--  <img alt="testClothes.svg" class="object-scale-down"  src="assets/icon/try-on.svg"/>-->
+  </div>
+
+  <div style="position: relative;">
+<!--    <img class="item-img" [defaultImage]="defaultImage" [lazyLoad]="'../../assets/3D_Outfit/Arto/Arto_SF_002_v3_top.png'" alt="test_outfit.svg">-->
+    <img class="item-img" src="{{this.productData.image_path}}" alt="test_outfit.svg">
+  </div>
+
+      <div>
+        <ion-card-content style="background: transparent">
+          <div lines="none">
+            <ion-label class="text-center text-medium-12px ">
+              <ion-text color="light"><p class="text-ellipsis-Row">{{productData.name}}</p></ion-text>
+              <ion-text><p>{{productData.brand}}</p></ion-text>
+              <ion-text color="tertiary"><p>HKD {{productData.price}}</p></ion-text>
+            </ion-label>
+          </div>
+        </ion-card-content>
+      </div>
+
+  </div>
+</ion-card>
+
+<!--TODO: productData struct need to be check-->
+
+<!--//Code by Angus//-->
+<!--<ion-card *ngIf="productData" class="flex grow m-2.5 itemCard min-w-0" color="easy_wear_item">-->
+<!--  <div class="flex flex-col grow min-w-0">-->
+<!--    <div class="basis-1/10 grow">-->
+<!--      <div class="flex flex-row justify-end itemCardIcon">-->
+<!--        <img alt="testClothes.svg" class="object-scale-down" src="assets/icon/try-on.svg"/>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="basis-5/10 grow">-->
+<!--      <div class="flex flex-row justify-center grow">-->
+<!--        <img [defaultImage]="defaultImage" [lazyLoad]="'../../assets/3D_Outfit/Arto/Arto_SF_002_v3_top.png'" alt="test_outfit.svg"-->
+<!--             class="object-fill" style="width: 100%; height: 100%"/>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="basis-4/10 grow">-->
+<!--      <div class="flex flex-col justify-start ">-->
+<!--        <div class="my-0.5 truncate text-center px-2.5 text-base">-->
+<!--          {{productData.name}}-->
+<!--        </div>-->
+<!--        <div class="my-0.5 truncate text-center px-2.5 text-base">-->
+<!--          {{productData.brand}}-->
+<!--        </div>-->
+<!--        <div class="my-0.5 truncate text-center px-2.5 selected text-base">-->
+<!--          HKD {{productData.price}}-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</ion-card>-->

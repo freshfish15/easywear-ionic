@@ -1,0 +1,156 @@
+<!--header part-->
+<ion-header class="ion-no-border">
+  <ion-toolbar style="padding:0 20px" class="header-toolbar">
+    <ion-buttons slot="start">
+      <ion-button routerLink="/setting"><ion-icon color="light" size="large" src="/assets/custom-icons/ew-setting.svg" ></ion-icon></ion-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center header-title">EXPLORE LOOKS</ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/fitting-room" class="circleButton"><ion-icon size="large" src="/assets/custom-icons/ew-vr-fitting.svg"></ion-icon>
+      <ion-badge> <div id="fitting-room-item-badge">{{ badgeNumber }}</div></ion-badge></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [scrollY]="true" class="bg-color" color="easy_wear">
+
+<!--  segment part-->
+  <div>
+    <div class="flex flex-row my-0">
+      <div class="basis-1/4"></div>
+      <div class="basis-1/4">
+
+        <ion-text (click)="filter_M()">
+          <p [ngClass]="{'underline selected' : !isFemale}" class="text-center text-medium-15px ">MEN</p>
+        </ion-text>
+      </div>
+      <div class="basis-1/4">
+        <ion-text (click)="filter_F()">
+          <p [ngClass]="{'underline selected' : isFemale}" class="text-center text-medium-15px">WOMEN</p>
+        </ion-text>
+      </div>
+      <div class="basis-1/4"></div>
+    </div>
+    <div *ngIf="isFemale"><ion-refresher slot="fixed" (ionRefresh)="RefreshF($event)">
+      <ion-refresher-content></ion-refresher-content>
+    </ion-refresher></div>
+
+    <div *ngIf="!isFemale"><ion-refresher slot="fixed" (ionRefresh)="RefreshM($event)">
+      <ion-refresher-content></ion-refresher-content>
+    </ion-refresher></div>
+    <!--  Categories part-->
+<!--    <div style="padding-top: 20px;" class=" flex flex-row items-center justify-center">-->
+<!--      <div class="w-fit scrollbar-hide flex space-x-10 overflow-y-hidden overflow-x-scroll px-10">-->
+<!--        <img (click)="filter_Top()" [ngClass]="{'filter-white' : !f_Top}" alt="Top.svg"-->
+<!--             src="../../assets/icon/clothesType/Top.svg">-->
+<!--        <img (click)="filter_Skirt()" [ngClass]="{'filter-white' : !f_Skirt ,'hidden' : !isFemale}"-->
+<!--             alt="Skirt.svg" src="../../assets/icon/clothesType/Skirt.svg">-->
+<!--        <img (click)="filter_Pants()" [ngClass]="{'filter-white' : !f_Pants}" alt="Pants.svg"-->
+<!--             class="filter-white" src="../../assets/icon/clothesType/Pants.svg">-->
+<!--        <img (click)="filter_Dress()" [ngClass]="{'filter-white' : !f_Dress,'hidden' : !isFemale}"-->
+<!--             alt="Dress.svg" class="filter-white" src="../../assets/icon/clothesType/Dress.svg">-->
+<!--        <img (click)="filter_Coat()" [ngClass]="{'filter-white' : !f_Coat}" alt="Coat.svg"-->
+<!--             class="filter-white" src="../../assets/icon/clothesType/Coat.svg">-->
+<!--        <img (click)="filter_Acc()" [ngClass]="{'filter-white' : !f_Acc}" alt="Acc.svg"-->
+<!--             class="filter-white" src="../../assets/icon/clothesType/Acc.svg">-->
+<!--      </div>-->
+<!--    </div>-->
+  </div>
+
+<!--Product list part-->
+  <div class="card_parent overflow-y-hidden scrollbar-hide overflow-hidden " style="padding: 0 20px 0 20px" *ngIf="cloth_list">
+    <div *ngFor="let item of cloth_list; let i = index; let even = even; let odd = odd; let last = last">
+
+
+<!--      <div *ngIf="odd && !last"  class="product-card-list-wrap">-->
+<!--        <app-eshop-item (click)="openDetail(cloth_list[i],i,isFemale)" [productData]='cloth_list[i]' class="product-card-container "></app-eshop-item>-->
+<!--        <app-eshop-item (click)="openDetail(cloth_list[i+1],i+1,isFemale)" [productData]='cloth_list[i+1]' class="product-card-container"></app-eshop-item>-->
+<!--&lt;!&ndash;        <img src="https://ic-fashion.org:8008/ClothImage?image_id=1" alt="test image">&ndash;&gt;-->
+<!--      </div>-->
+      <div  class="product-card-list-wrap" *ngIf="item.brand !== '1'">
+        <app-eshop-item (click)="openDetail(cloth_list[i],i,isFemale)" [productData]='cloth_list[i]' class="product-card-container "></app-eshop-item>
+
+        <!--        <img src="https://ic-fashion.org:8008/ClothImage?image_id=1" alt="test image">-->
+      </div>
+
+<!--      <div *ngIf="odd && last"  class="product-card-list-wrap">-->
+<!--        <app-eshop-item (click)="openDetail(cloth_list[i],i,isFemale)" [productData]='cloth_list[i]' class="product-card-container "></app-eshop-item>-->
+
+<!--        &lt;!&ndash;        <img src="https://ic-fashion.org:8008/ClothImage?image_id=1" alt="test image">&ndash;&gt;-->
+<!--      </div>-->
+
+
+
+    </div>
+  </div>
+<!--Product list part-->
+
+<!--&lt;!&ndash;  testing&ndash;&gt;-->
+<!--  <div class="overflow-y-hidden scrollbar-hide overflow-hidden" style="padding: 0 20px 0 20px">-->
+<!--    <div>-->
+<!--      <div  class="product-card-list-wrap">-->
+<!--        <app-eshop-item [productData]='cloth_list' isFemale="{{isFemale}}" class="product-card-container"></app-eshop-item>-->
+<!--        <app-eshop-item [productData]='cloth_list' isFemale="{{isFemale}}" class="product-card-container"></app-eshop-item>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--&lt;!&ndash;  testing&ndash;&gt;-->
+
+
+
+</ion-content>
+<div class="bg-color1">
+<ion-tabs class="floatingbar">
+
+  <div class="flex flex-row items-center justify-center grow">
+    <a class="basis-1/4" routerLink="/eshop">
+      <div class="flex flex-col items-center justify-center filter-orange">
+        <ion-icon color="tertiary" size="large" src="/assets/custom-icons/ew-home.svg"></ion-icon>
+        <ion-label>Home</ion-label>
+      </div>
+    </a>
+
+    <a class="basis-1/4" (click)="goToAR()">
+      <div class="flex flex-col items-center justify-center">
+        <ion-icon color="light" size="large" src="/assets/custom-icons/ew-AR.svg"></ion-icon>
+        <ion-label color="light">AR World</ion-label>
+      </div>
+    </a>
+    <a class="basis-1/4" routerLink="/avatar-management">
+      <div class="flex flex-col items-center justify-center">
+        <ion-icon color="light" size="large" src="/assets/custom-icons/ew-avatar.svg"></ion-icon>
+        <ion-label color="light">Avatar</ion-label>
+      </div>
+    </a>
+    <!--      <a class="basis-1/4">-->
+    <!--        <div class="flex flex-col items-center justify-center">-->
+    <!--          <ion-icon size="large" src="/assets/custom-icons/ew-shopping.svg"></ion-icon>-->
+    <!--          <ion-label>Bag</ion-label>-->
+    <!--        </div>-->
+    <!--      </a>-->
+
+  </div>
+</ion-tabs>
+</div>
+<!--Product list code by Angus-->
+<!--  <div class="overflow-y-hidden scrollbar-hide overflow-hidden" *ngIf="cloth_list">-->
+
+<!--    <div *ngFor="let item of cloth_list; let i = index; let even = even">-->
+
+<!--&lt;!&ndash;      TODO : need to modify because of the data structure change     &ndash;&gt;&ndash;&gt;-->
+
+<!--      <div *ngIf="even" class="flex flex-row grow px-3" >-->
+<!--        <div class="basis-1/2  min-w-0 grow ">-->
+<!--          <a (click)="openDetail(cloth_list[i],i,isFemale)" class="min-w-0 ">-->
+
+<!--            <app-eshop-item [productData]='cloth_list[i]' class="rounded-r-2xl  min-w-0"></app-eshop-item>-->
+<!--          </a>-->
+<!--        </div>-->
+<!--        <div class="basis-1/2 min-w-0 grow">-->
+<!--          <a (click)="openDetail(cloth_list[i+1],i+1,isFemale)" class="">-->
+<!--            <app-eshop-item [productData]='cloth_list[i+1]' class="rounded-r-2xl min-w-0 "></app-eshop-item>-->
+<!--          </a>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->

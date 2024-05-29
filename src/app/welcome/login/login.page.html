@@ -1,0 +1,25 @@
+<ion-content [scrollY]="false" [fullscreen]="true">
+
+  <!--title part-->
+  <div class="text-center" style="height:50%;margin-top: 100px">
+    <h1 id="welcome">EASYWEAR</h1>
+    <p class="text">Try the digital experience anytime,
+      <br>anywhere
+    </p>
+  </div>
+
+  <!--button part-->
+  <div class="button-align">
+    <ion-button class="button-white-bg" [routerLink]="['./signin']" expand="block">
+      <p class="button-text"> Sign in </p>
+    </ion-button>
+    <ion-button class="button-secondary-bg" [routerLink]="['./create']" expand="block">
+      <ion-icon size="large" slot="start" src="/assets/custom-icons/ew-lock.svg"></ion-icon>
+      <p class="button-text">Create an account </p>
+    </ion-button>
+    <ion-button  class="button-white-bg" expand="block" [routerLink]="['/eshop']">
+      <p class="button-text" >Browse as a guest</p>
+    </ion-button>
+  </div>
+</ion-content>
+

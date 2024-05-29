@@ -1,0 +1,628 @@
+{
+    "code": "0",
+    "codeDesc": "Success",
+    "msg": "",
+    "data": {
+        "measureId": "760859913647165440",
+        "frontProfileBody": null,
+        "sideProfileBody": null,
+        "frontImgSrc": null,
+        "sideImgSrc": null,
+        "sizes": [
+            {
+                "sizeCode": "fsize00_010",
+                "sizeCmVal": 171.00,
+                "sizeName": "Body Height",
+                "sizeDesc": "The vertical length between head-top to the floor.",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize00_010.png"
+            },
+            {
+                "sizeCode": "fsize00_020",
+                "sizeCmVal": 58.00,
+                "sizeName": "Weight",
+                "sizeDesc": "Weight",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize00_020.png"
+            },
+            {
+                "sizeCode": "fsize01_010",
+                "sizeCmVal": 86.48,
+                "sizeName": "Bust girth",
+                "sizeDesc": "The maximum horizontal girth with tape-measure passing over the shoulder blades (scapulae) and nipples (the most prominent protrusion of the bra cap for ladies).",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize01_010.png"
+            },
+            {
+                "sizeCode": "fsize01_020",
+                "sizeCmVal": 88.19,
+                "sizeName": "Above bust girth",
+                "sizeDesc": "The girth around the torso, taken under the arms and above the fullest part of the chest/bust.",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize01_020.png"
+            },
+            {
+                "sizeCode": "fsize01_025",
+                "sizeCmVal": 76.79,
+                "sizeName": "Under bust/chest girth",  //chest
+                "sizeDesc": "The girth around the torso, taken under chest/bust.",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize01_025.png"
+            },
+            {
+                "sizeCode": "fsize01_030",
+                "sizeCmVal": 73.09,
+                "sizeName": "Waist girth",  //waistCM
+                "sizeDesc": "The horizontal girth of natural waistline between top of the hip bones (iliac crests) and the lower ribs.",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize01_030.png"
+            },
+            {
+                "sizeCode": "fsize01_031",
+                "sizeCmVal": 75.41,
+                "sizeName": "Waist girth Internal Test",
+                "sizeDesc": "The horizontal girth of natural waistline between top of the hip bones (iliac crests) and the lower ribs.",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize01_031.png"
+            },
+            {
+                "sizeCode": "fsize01_032",
+                "sizeCmVal": 75.63,
+                "sizeName": "Upper Waist girth E",
+                "sizeDesc": "The horizontal girth of the line 1 inch higher than natural waistline",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize01_032.png"
+            },
+            {
+                "sizeCode": "fsize01_033",
+                "sizeCmVal": 80.09,
+                "sizeName": "Lower Waist girth",
+                "sizeDesc": "The horizontal girth of the line 1 inch belower than natural waistline",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize01_033.png"
+            },
+            {
+                "sizeCode": "fsize01_040",
+                "sizeCmVal": 98.25,
+                "sizeName": "Hip girth",  //hipsCM
+                "sizeDesc": "The maximum horizontal girth around the torsa taken at the greatest portrusion of the buttocks as viewed from the side.",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize01_040.png"
+            },
+            {
+                "sizeCode": "fsize01_050",
+                "sizeCmVal": 83.41,
+                "sizeName": "High hip girth",
+                "sizeDesc": "The horizontal girth around torso, taken at the midway between the natural waist level and the hip level.",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize01_050.png"
+            },
+            {
+                "sizeCode": "fsize01_060",
+                "sizeCmVal": 75.06,
+                "sizeName": "Low waist girth",
+                "sizeDesc": "The horizontal girth around torso, taken at the midway between the bust level and the crotch level. It is usually the waist level of trousers.",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize01_060.png"
+            },
+            {
+                "sizeCode": "fsize02_020",
+                "sizeCmVal": 43.73,
+                "sizeName": "Back waist Length",
+                "sizeDesc": "The contour from nape (back of neck) to natural waist line.",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize02_020.png"
+            },
+            {
+                "sizeCode": "fsize02_022",
+                "sizeCmVal": 42.06,
+                "sizeName": "Back mid waist Length",
+                "sizeDesc": "The contour from nape (back of neck) to natural waist line.",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize02_022.png"
+            },
+            {
+                "sizeCode": "fsize03_010",
+                "sizeCmVal": 41.65,
+                "sizeName": "Across shoulder",    //shoulder
+                "sizeDesc": "Horizontal length with tape-measure between two shoulder points (top of the shoulder joint).",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize03_010.png"
+            },
+            {
+                "sizeCode": "fsize03_011",
+                "sizeCmVal": 37.31,
+                "sizeName": "Across shoulder front",
+                "sizeDesc": "Horizontal length with tape-measure between two shoulder points (top of the shoulder joint) from front.",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize03_011.png"
+            },
+            {
+                "sizeCode": "fsize03_012",
+                "sizeCmVal": 36.85,
+                "sizeName": "Across shoulder width（Direct line）",
+                "sizeDesc": "Horizontal length with tape-measure between two shoulder points (top of the shoulder joint).",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize03_012.png"
+            },
+            {
+                "sizeCode": "fsize03_013",
+                "sizeCmVal": 92.42,
+                "sizeName": "Shoulder girth",
+                "sizeDesc": "The girth around the torso, taken at shoulder level.",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize03_013.png"
+            },
+            {
+                "sizeCode": "fsize03_020",
+                "sizeCmVal": 34.97,
+                "sizeName": "Across front",
+                "sizeDesc": "Horizontal length with tape-measure between two front arm points (where the torso is connected with the arms) above the fullest part of the chest/bust..",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize03_020.png"
+            },
+            {
+                "sizeCode": "fsize03_021",
+                "sizeCmVal": 46.48,
+                "sizeName": "Bust girth front",  //bust
+                "sizeDesc": "Horizontal length with tape-measure between two back arm points at bust level.",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize03_021.png"
+            },
+            {
+                "sizeCode": "fsize03_030",
+                "sizeCmVal": 32.57,
+                "sizeName": "Across back",
+                "sizeDesc": "Horizontal length with tape-measure between two back arm points (where the torso is connected with the arms) passing over the shoulder blades.",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize03_030.png"
+            },
+            {
+                "sizeCode": "fsize03_042",
+                "sizeCmVal": 4.33,
+                "sizeName": "Centre shoulder to waist (Front) Internal Test",
+                "sizeDesc": "Vertical length with tape-measure from the mid-point of shoulder line, passing over bust point, intersect with waist girth and end at the hip level.",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize03_042.png"
+            },
+            {
+                "sizeCode": "fsize03_052",
+                "sizeCmVal": 39.17,
+                "sizeName": "Centre shoulder to waist (Back)",
+                "sizeDesc": "Vertical length with tape-measure from the mid-point of shoulder line, passing over shoulder blade, intersect with waist level and end at the hip level.",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize03_052.png"
+            },
+            {
+                "sizeCode": "fsize03_060",
+                "sizeCmVal": 46.48,
+                "sizeName": "Bust arc front",
+                "sizeDesc": "From underarm mid-point across bust points to underam mid-point with tape-measure",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize03_060.png"
+            },
+            {
+                "sizeCode": "fsize03_070",
+                "sizeCmVal": 13.84,
+                "sizeName": "Width of bust prominence",
+                "sizeDesc": "Horizontal distance between two bust points",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize03_070.png"
+            },
+            {
+                "sizeCode": "fsize04_010",
+                "sizeCmVal": 40.98,
+                "sizeName": "Neck base girth",
+                "sizeDesc": "The girth of the base of the neck with tape-measure passing over the nape (back of neck), side neck point (where neck base join with shoulder line) and the top of the collarbone at the front.",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize04_010.png"
+            },
+            {
+                "sizeCode": "fsize04_020",   //neck
+                "sizeCmVal": 34.09,
+                "sizeName": "Neck girth",
+                "sizeDesc": "The girth of the neck at 2.5cm (1 inch) above the neck base.",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize04_020.png"
+            },
+            {
+                "sizeCode": "fsize05_010",
+                "sizeCmVal": 15.00,
+                "sizeName": "Shoulder length",
+                "sizeDesc": "A line from the side of the neck base to the top of the shoulder joint.",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize05_010.png"
+            },
+            {
+                "sizeCode": "fsize05_011",
+                "sizeCmVal": 16.60,
+                "sizeName": "Left shoul`der slope",
+                "sizeDesc": "The angle between the left shoulder line and the horizontal level",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize05_011.png"
+            },
+            {
+                "sizeCode": "fsize05_012",
+                "sizeCmVal": 17.27,
+                "sizeName": "Right shoulder slope",
+                "sizeDesc": "The angle between the right shoulder line and the horizontal level",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize05_012.png"
+            },
+            {
+                "sizeCode": "fsize05_020",
+                "sizeCmVal": 22.13,
+                "sizeName": "Neck to bust",
+                "sizeDesc": "The length between shoulder neck point (where neck base join with shoulder line) to bust point",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize05_020.png"
+            },
+            {
+                "sizeCode": "fsize06_010",
+                "sizeCmVal": 43.63,
+                "sizeName": "Armhole girth",
+                "sizeDesc": "The girth of the armscye with tape-measure passing over the shoulder point, the front arm point, the armpit, and the back arm point.",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize06_010.png"
+            },
+            {
+                "sizeCode": "fsize07_010",
+                "sizeCmVal": 29.05,
+                "sizeName": "Upper arm girth", //upperArmCM
+                "sizeDesc": "The girth of the upper arm under armpit.",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize07_010.png"
+            },
+            {
+                "sizeCode": "fsize07_020",
+                "sizeCmVal": 25.21,
+                "sizeName": "Elbow girth",
+                "sizeDesc": "The girth of the arm at elbow joint (olecranon).",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize07_020.png"
+            },
+            {
+                "sizeCode": "fsize07_030",
+                "sizeCmVal": 17.26,
+                "sizeName": "Wrist girth", //sleeveCM
+                "sizeDesc": "The girth of the arm at wrist bone (distal end of ulna).",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize07_030.png"
+            },
+            {
+                "sizeCode": "fsize08_010",
+                "sizeCmVal": 51.88,
+                "sizeName": "Arm length",
+                "sizeDesc": "With arm bend at 90 degree and measure from shoulder point over elbow bone (olecranon) and end at wrist bone (distal end of ulna).",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize08_010.png"
+            },
+            {
+                "sizeCode": "fsize08_012",
+                "sizeCmVal": 72.70,
+                "sizeName": "Arm length (from mid shoulder)",
+                "sizeDesc": "Measure from back neck point and end at wrist bone (distal end of ulna).",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize08_012.png"
+            },
+            {
+                "sizeCode": "fsize08_013",
+                "sizeCmVal": 59.79,
+                "sizeName": "Arm length (shoulder to the area between thumb and index)",
+                "sizeDesc": "Measure from shoulder point and end at the area between thumb and index.",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize08_013.png"
+            },
+            {
+                "sizeCode": "fsize08_014",
+                "sizeCmVal": 79.31,
+                "sizeName": "Arm length (from back neck to the area between thumb and index)",
+                "sizeDesc": "Measure from back neck point and end at the area between thumb and index.",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize08_014.png"
+            },
+            {
+                "sizeCode": "fsize08_030",
+                "sizeCmVal": 33.20,
+                "sizeName": "Elbow length",
+                "sizeDesc": "Measure from shoulder point and end at elbow bone.",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize08_030.png"
+            },
+            {
+                "sizeCode": "fsize09_010",
+                "sizeCmVal": 54.55,
+                "sizeName": "Max. thigh girth",  //thighCM
+                "sizeDesc": "The girth of the leg below crotch.",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize09_010.png"
+            },
+            {
+                "sizeCode": "fsize09_011",
+                "sizeCmVal": 50.15,
+                "sizeName": "Mid thigh girth",
+                "sizeDesc": "The girth of the leg between crotch and knee",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize09_011.png"
+            },
+            {
+                "sizeCode": "fsize09_020",
+                "sizeCmVal": 38.15,
+                "sizeName": "Knee girth",
+                "sizeDesc": "The girth of the leg at knee level.",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize09_020.png"
+            },
+            {
+                "sizeCode": "fsize09_030",
+                "sizeCmVal": 37.48,
+                "sizeName": "Calf girth", //calfCM
+                "sizeDesc": "The girth of the leg at fullest part of the calf.",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize09_030.png"
+            },
+            {
+                "sizeCode": "fsize09_040",
+                "sizeCmVal": 24.91,
+                "sizeName": "Ankle girth",
+                "sizeDesc": "The girth of the leg at ankle bone.",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize09_040.png"
+            },
+            {
+                "sizeCode": "fsize10_030",
+                "sizeCmVal": 66.05,
+                "sizeName": "Crotch length(to natural waist)",
+                "sizeDesc": "The length with tape-measure from front centre waist level, over crtoch to back centre waist level (natural waist level).",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize10_030.png"
+            },
+            {
+                "sizeCode": "fsize10_040",
+                "sizeCmVal": 62.22,
+                "sizeName": "Crotch length (to low waist)",
+                "sizeDesc": "The length with tape-measure from front centre waist level, over crtoch to back centre waist level (low waist level).",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize10_040.png"
+            },
+            {
+                "sizeCode": "fsize10_050",
+                "sizeCmVal": 30.82,
+                "sizeName": "Body rise",
+                "sizeDesc": "The vertical distance between natural waist level and the crotch.",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize10_050.png"
+            },
+            {
+                "sizeCode": "fsize11_030",
+                "sizeCmVal": 104.96,
+                "sizeName": "Side seam", //outSeamCM
+                "sizeDesc": "The vertical distance with tape-measure from natural waist level to the floor at side.",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize11_030.png"
+            },
+            {
+                "sizeCode": "fsize11_050",
+                "sizeCmVal": 76.99,
+                "sizeName": "Inseam/Inleg",
+                "sizeDesc": "With tape-measure from undercrotch to floor along the inleg.",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize11_050.png"
+            },
+            {
+                "sizeCode": "fsize11_051",
+                "sizeCmVal": 64.25,
+                "sizeName": "Inseam/Inleg（Ankle）",
+                "sizeDesc": "With tape-measure from undercrotch to ankle along the inleg.",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize11_051.png"
+            },
+            {
+                "sizeCode": "fsize12_010",
+                "sizeCmVal": 147.58,
+                "sizeName": "Cervical height",
+                "sizeDesc": "The vertical distance between nape to the floor",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize12_010.png"
+            },
+            {
+                "sizeCode": "fsize12_011",
+                "sizeCmVal": 151.39,
+                "sizeName": "Cervical height on body",
+                "sizeDesc": "The vertical distance between nape to the hip plus vertical distance to the floor",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize12_011.png"
+            },
+            {
+                "sizeCode": "fsize12_021",
+                "sizeCmVal": 20.33,
+                "sizeName": "Height Between Waist and Hip",
+                "sizeDesc": "The vertical distance between waist line to hip line",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize12_021.png"
+            },
+            {
+                "sizeCode": "fsize12_022",
+                "sizeCmVal": 60.20,
+                "sizeName": "Height Between Waist and Knee",
+                "sizeDesc": "The vertical distance between waist line to knee line",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize12_022.png"
+            },
+            {
+                "sizeCode": "fsize12_023",
+                "sizeCmVal": 74.16,
+                "sizeName": "Height Between Waist and Calf",
+                "sizeDesc": "The vertical distance between waist line to calf line",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize12_023.png"
+            },
+            {
+                "sizeCode": "fsize12_024",
+                "sizeCmVal": 106.05,
+                "sizeName": "Height Between Waist and floor",
+                "sizeDesc": "The vertical distance between waist line and the floor",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize12_024.png"
+            },
+            {
+                "sizeCode": "fsize13_011",
+                "sizeCmVal": 32.50,
+                "sizeName": "Hip width",
+                "sizeDesc": "The horizontal width between left and right at hip level",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize13_011.png"
+            },
+            {
+                "sizeCode": "fsize13_012",
+                "sizeCmVal": 23.04,
+                "sizeName": "Hip depth",
+                "sizeDesc": "The horizontal distance between front and back at hip level",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize13_012.png"
+            },
+            {
+                "sizeCode": "fsize13_013",
+                "sizeCmVal": 20.69,
+                "sizeName": "Waist depth",
+                "sizeDesc": "The horizontal distance between front and back at waist level",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize13_013.png"
+            },
+            {
+                "sizeCode": "fsize13_014",
+                "sizeCmVal": 22.59,
+                "sizeName": "Low waist depth",
+                "sizeDesc": "The horizontal distance between front and back at low waist level",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize13_014.png"
+            },
+            {
+                "sizeCode": "fsize13_015",
+                "sizeCmVal": 23.33,
+                "sizeName": "High-hip depth",
+                "sizeDesc": "The horizontal distance between front and back at high-hip level",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize13_015.png"
+            },
+            {
+                "sizeCode": "fsize13_030",
+                "sizeCmVal": 22.28,
+                "sizeName": "Chest width",
+                "sizeDesc": "The horizontal distance between the chest and back at chest level",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize13_030.png"
+            },
+            {
+                "sizeCode": "fsize14_010",
+                "sizeCmVal": 56.13,
+                "sizeName": "Head girth (forehead to occipital)",
+                "sizeDesc": "The girth of the head pass forehead and occipital",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize14_010.png"
+            },
+            {
+                "sizeCode": "fsize14_020",
+                "sizeCmVal": 57.53,
+                "sizeName": "Head girth (ebrow to occipital)",
+                "sizeDesc": "The girth of the head pass ebrow and occipital",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize14_020.png"
+            },
+            {
+                "sizeCode": "fsize15_001",
+                "sizeCmVal": 15.77,
+                "sizeName": "Head lateral width",
+                "sizeDesc": "The lateral width at head level",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize15_001.png"
+            },
+            {
+                "sizeCode": "fsize15_002",
+                "sizeCmVal": 10.11,
+                "sizeName": "Neck lateral width",
+                "sizeDesc": "The lateral width at neck level",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize15_002.png"
+            },
+            {
+                "sizeCode": "fsize15_003",
+                "sizeCmVal": 36.77,
+                "sizeName": "Shoulder lateral width",
+                "sizeDesc": "The lateral width at shoulder level",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize15_003.png"
+            },
+            {
+                "sizeCode": "fsize15_004",
+                "sizeCmVal": 28.16,
+                "sizeName": "Upper-lung lateral width",
+                "sizeDesc": "The lateral width at up-lung level",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize15_004.png"
+            },
+            {
+                "sizeCode": "fsize15_005",
+                "sizeCmVal": 26.53,
+                "sizeName": "Lower-lung lateral width",
+                "sizeDesc": "The lateral width at low-lung level",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize15_005.png"
+            },
+            {
+                "sizeCode": "fsize15_006",
+                "sizeCmVal": 26.76,
+                "sizeName": "Abdomen lateral width",
+                "sizeDesc": "The lateral width at abdomen level",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize15_006.png"
+            },
+            {
+                "sizeCode": "fsize15_007",
+                "sizeCmVal": 32.97,
+                "sizeName": "Hip lateral width",
+                "sizeDesc": "The lateral width at hip level",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize15_007.png"
+            },
+            {
+                "sizeCode": "fsize15_008",
+                "sizeCmVal": 9.29,
+                "sizeName": "Knee lateral width",
+                "sizeDesc": "The lateral width at knee level",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize15_008.png"
+            },
+            {
+                "sizeCode": "fsize15_009",
+                "sizeCmVal": 4.94,
+                "sizeName": "Ankle lateral width",
+                "sizeDesc": "The lateral width at ankle level",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize15_009.png"
+            },
+            {
+                "sizeCode": "fsize16_001",
+                "sizeCmVal": 22.17,
+                "sizeName": "Armhole depth",
+                "sizeDesc": "From the midpoint of the back neck down to the armpit",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize16_001.png"
+            },
+            {
+                "sizeCode": "fsize16_002",
+                "sizeCmVal": 31.63,
+                "sizeName": "Front shoulder height",
+                "sizeDesc": "From the midpoint of the back neck, along the neck, to bust point.",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize16_002.png"
+            },
+            {
+                "sizeCode": "fsize16_004",
+                "sizeCmVal": 19.61,
+                "sizeName": "Front rise",
+                "sizeDesc": "The vertical distance from waist line(front) to the crotch",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize16_004.png"
+            },
+            {
+                "sizeCode": "fsize99_001",
+                "sizeCmVal": 62.47,
+                "sizeName": "Cloth length",
+                "sizeDesc": "The veritical distance between the neck and hip",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize99_001.png"
+            },
+            {
+                "sizeCode": "fsize99_002",
+                "sizeCmVal": 4.28,
+                "sizeName": "Hip protrude degree",
+                "sizeDesc": "The horizontal distance between Hip and Back Waist",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize99_002.png"
+            },
+            {
+                "sizeCode": "fsize99_003",
+                "sizeCmVal": 8.02,
+                "sizeName": "Back Hump degree",
+                "sizeDesc": "The horizontal distance between back and neck Waist",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize99_003.png"
+            },
+            {
+                "sizeCode": "fsize99_004",
+                "sizeCmVal": 3.02,
+                "sizeName": "Belly Hump degree",
+                "sizeDesc": "The horizontal distance between belly and thigh",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize99_004.png"
+            },
+            {
+                "sizeCode": "fsize99_011",
+                "sizeCmVal": 62.93,
+                "sizeName": "Cloth length(back neck to hip)",
+                "sizeDesc": "The contour from neck to hip",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize99_011.png"
+            },
+            {
+                "sizeCode": "fsize99_091",
+                "sizeCmVal": 75.41,
+                "sizeName": "Free baseline girth",
+                "sizeDesc": "The girth around the torso, taken under front-view feature line.",
+                "iconUrl": "https://www.emtailor.com/imeas_asset/icon/icon190102/fsize99_091.png"
+            }
+        ],
+        "intlSize": [
+            {
+                "BottomSz": "170/88B",
+                "TopSz": "170/88B",
+                "Country": "CN",
+                "TopSzTight": "170/84B",
+                "ChartVersion": "中国GT1335.2-Women 2008标准",
+                "BottomSzTight": "170/84B",
+                "SizeTight": "170/84B",
+                "Size": "170/88B"
+            },
+            {
+                "BottomSz": "M",
+                "TopSz": "S",
+                "Country": "EU",
+                "TopSzTight": "XS",
+                "ChartVersion": "欧洲EN 13402-3 2013标准",
+                "BottomSzTight": "S",
+                "SizeTight": "XS",
+                "Size": "S"
+            },
+            {
+                "BottomSz": "8",
+                "TopSz": "4",
+                "Country": "US",
+                "TopSzTight": "2",
+                "ChartVersion": "美国ASTM D5585 2011 Misses 0-20标准",
+                "BottomSzTight": "6",
+                "SizeTight": "6",
+                "Size": "8"
+            }
+        ],
+        "sr": null
+    }
+}

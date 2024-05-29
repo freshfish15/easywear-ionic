@@ -1,0 +1,136 @@
+:root {
+  --numCols: '2';
+}
+
+ion-button.circleButton{
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  height:55px;
+  width:55px;
+}
+
+.avatar-bg {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  height: 50vh;
+}
+
+.avatar-FullBody {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  height: 50vh;
+}
+
+.avatar-Grid {
+  //--ion-grid-width: 150%;
+  //--ion-grid-width-xs: 50%;
+  //--ion-grid-width-sm: 288px;
+  //--ion-grid-width-md: 384px;
+  //--ion-grid-width-lg: 480px;
+  //--ion-grid-width-xl: 570px;
+  position: relative;
+  top: 50vh;
+  z-index: 1;
+  flex-wrap: nowrap;
+  overflow-x: scroll !important;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  padding:0;
+  /* Hide ion-content scrollbar */
+  ::-webkit-scrollbar{
+    display:none;}
+}
+
+.avatar-button {
+  position: relative;
+  // margin-top: auto;
+  // margin-bottom: auto;
+  //margin: auto;
+  top: 0;
+  bottom: 0;
+  height: 10vh;
+  width: 10vh;
+}
+
+.buttons {
+  position: relative;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+
+  height: 5vh;
+  width: 60vw;
+  font-size: calc(1.5vh + 1vw);
+  margin: auto;
+  border: 1px solid #FFFFFF;
+  border-radius: 3vh;
+}
+
+#addButton {
+  top: 57vh;
+  z-index: 1;
+}
+
+#detailButton {
+  top: 60vh;
+  z-index: 1;
+}
+
+.avatar-row {
+  height: 10vh;
+  flex-wrap: nowrap;
+  overflow-x: scroll !important;
+  overflow-y: hidden;
+}
+
+.avatar-icon {
+  height: 8vh;
+  width: 8vh;
+}
+.avatar-col {
+  height: 10vh;
+}
+
+#addIcon {
+  position: absolute;
+  margin-left: auto;
+  left: 0;
+}
+
+ion-grid {
+  --ion-grid-columns: 3.5!important;
+}
+
+.floatingbar {
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  z-index: 100;
+  position: fixed;
+  border-radius: 45px;
+  height: 60px;
+  margin: auto;
+  margin-bottom: 3vh;
+  width: 80vw;
+
+  ion-label{
+    font-size: calc(8px + 1vw);
+  }
+}
+
+//Old code by Jason///
+//#header {
+//  color: #FFFFFF;
+//  font-size: calc(2vh + 1vw);
+//}

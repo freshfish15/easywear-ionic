@@ -1,0 +1,199 @@
+#forgot {
+  margin: auto;
+  width: 45vw;
+  height: 5vh;
+  opacity: 0.9;
+
+  font-family: MontserratRegular;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  /* or 167% */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-decoration-line: underline;
+  text-transform: none;
+
+  color: #FFFFFF;
+}
+#socialAccountText {
+    font-family: MontserratMedium;
+    font-size: calc(8px + 1vw);
+    line-height: 17px;
+    /* or 142% */
+    letter-spacing: -0.5px;
+    color: #FFFFFF;
+    padding: 20px 0 20px 0;
+}
+
+
+//icon controllers
+.iconCon {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+#google {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+#facebook {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    margin: auto;
+}
+
+#wechat {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    margin-left: 0;
+}
+
+.itemsCon {
+    position: relative;
+    opacity: 1;
+    z-index: 0;
+}
+
+//-------old code by jason------
+//ion-input {
+//    color: black;
+//    background: #F2F2F2;
+//    border-radius: 30px;
+//    font-size: calc(2vw + 0.5vh);
+//
+//    width: 100%;
+//    height: 100%;
+//    margin: auto;
+//    position: absolute;
+//    left: 0;
+//    right: 0;
+//}
+
+//controller of inputs (moved to global.css)
+
+//.input-inner{
+//  color: black;
+//  background: #F2F2F2;
+//  border-radius: 30px;
+//  font-size: calc(2vw + 0.5vh);
+//
+//
+//  position: relative;
+//  height: 3vh;
+//  width: 75vw;
+//  bottom: 0;
+//  margin: auto;
+//  --padding-end: 3vw;
+//  --padding-start: 3vw;
+//}
+
+//controller of input label
+
+//.input-label {
+//  position: relative;
+//  left:10vw;
+//
+//  font-size: calc(12px + 1vw);
+//  font-family: MontserratMedium;
+//  padding-bottom: 3vw;
+//  color: #FFFFFF;
+//  //letter-spacing: -0.5px;
+//  //line-height: 5vh;
+//  /* or 113% */
+//  //display: flex;
+//  //align-items: center;
+//}
+//text controls
+
+//.buttonText {
+//  font-size: calc(12px + 1vw);
+//  font-family: MontserratMedium;
+//  text-transform: none;
+//  display: flex;
+//  align-items: center;
+//  text-align: center;
+//  letter-spacing: 0.05em;
+//}
+
+//#rmbMe {
+//    position: absolute;
+//    width: 30vw;
+//    height: 20px;
+//    left: 16vw;
+//    top: calc(33vh + 1.5vw);
+//}
+
+//#check {
+//    position: absolute;
+//    width: 6vw;
+//    height: 6vw;
+//    left: 7vw;
+//    top: 33vh;
+//}
+
+// controller of buttons
+//.buttonsCon {
+//    width: 100%;
+//    height: 100%;
+//    margin: auto;
+//    position: absolute;
+//    left: 0;
+//    right: 0;
+//}
+
+//#signinButton {
+//  position: relative;
+//  margin: auto;
+//  width: 75vw;
+//  height: 5vh;
+//  top: 8vh;
+//  opacity: 0.9;
+//
+//  --background: #6C6AEB;
+//  --background-hover: #9ce0be;
+//  --background-activated: #88f4be;
+//  --background-focused: #88f4be;
+//
+//  --color: #FFFFFF;
+//
+//  --box-shadow: 0 2px 6px 0 rgb(0, 0, 0, 0.25);
+//
+//  --ripple-color: deeppink;
+//
+//  --padding-top: 10px;
+//  --padding-bottom: 10px;
+//}
+
+//#createButton {
+//    position: relative;
+//    margin: auto;
+//    width: 75vw;
+//    height: 5vh;
+//    top: 22vh;
+//    opacity: 0.9;
+//
+//    --background: #3664AE;
+//    --background-hover: #9ce0be;
+//    --background-activated: #88f4be;
+//    --background-focused: #88f4be;
+//
+//    --color: #FFFFFF;
+//
+//    --box-shadow: 0 2px 6px 0 rgb(0, 0, 0, 0.25);
+//
+//    --ripple-color: deeppink;
+//
+//    --padding-top: 10px;
+//    --padding-bottom: 10px;
+//}

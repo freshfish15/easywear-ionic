@@ -1,0 +1,6 @@
+<svg class="ionicon"  width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <title>ew-avatar-outline</title>
+  <path class="ionicon-fill-none" stroke-width="30px" stroke-linecap="round" stroke-linejoin="round" d="M250.33 263.333C319.685 263.333 352.861 305.512 370.997 345.237C379.956 364.863 364.097 386 342.523 386H167.421M250.33 263.333C227.719 263.333 174.958 248 174.958 186.667C174.958 140.667 205.107 110 250.33 110C295.553 110 325.702 140.667 325.702 186.667C325.702 217.333 304.598 263.333 250.33 263.333ZM250.33 263.333C175.053 263.333 142.396 313.024 125.333 355.333" />
+<circle cx="256" cy="256" r="224" class="ionicon-fill-none" stroke-width="30px" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+

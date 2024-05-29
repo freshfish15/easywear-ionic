@@ -1,0 +1,169 @@
+<ion-content class="bg-color">
+
+  <ion-toolbar class="header-toolbar">
+    <ion-button (click)="cancel()"  routerLink="/avatar-capture-camera-face">
+      <ion-icon size="large" color="light" src="/assets/custom-icons/ew-back.svg"></ion-icon>
+    </ion-button>
+    <ion-title class="ion-text-center header-title">Body Scanning</ion-title>
+    <ion-buttons  slot="end" >
+      <ion-button class="text-regular-12px" color="light" routerLink="/avatar-capture-camera-body" (click)="cancel()">Skip</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+  <div class="flex flex-col">
+<!--    <div class="flex flex-row mx-5 mt-5 content-center justify-center items-center">-->
+<!--      <img (click)="cancel()" routerLink="/avatar-capture-camera-face" alt="back.png" class="object-scale-down p-1.5 basis-1/6"-->
+<!--           src="../../../assets/icon/back.svg"/>-->
+<!--      <h1 class="text-xl font-bold text-center basis-4/6 titleDropShadow">BODY SCANNING</h1>-->
+<!--      <div (click)="cancel()"  class="basis-1/6">Skip</div>-->
+<!--    </div>-->
+    <div class="container self-center">
+      <div class="">
+        <div *ngIf="siderPage === 0">
+          <div class="flex flex-row  mx-5 mt-5 content-center justify-center items-center mb-5">
+            <img alt="Exit.svg" class="object-scale-down mx-2.5"
+                 src="../../../assets/icon/bs-1-icon.svg"/>
+            <h1 class="text-semibold-20px text-center">PREPARATION</h1>
+          </div>
+        </div>
+        <div *ngIf="siderPage === 1 || siderPage ===2">
+          <div class="flex flex-row  mx-5 mt-5 content-center justify-center items-center mb-5">
+            <img alt="Exit.svg" class="object-scale-down mx-2.5"
+                 src="../../../assets/icon/bs-2-icon.svg"/>
+            <h1 class="text-semibold-20px text-center">CAMERA SETTING</h1>
+          </div>
+        </div>
+
+        <div *ngIf="siderPage === 3 || siderPage ===4">
+          <div class="flex flex-row  mx-5 mt-5 content-center justify-center items-center mb-5">
+            <img alt="Exit.svg" class="object-scale-down mx-2.5"
+                 src="../../../assets/icon/bs-3-icon.svg"/>
+            <h1 class="text-semibold-20px text-center">POSITION</h1>
+          </div>
+        </div>
+      </div>
+      <ion-slides  pager="true" class="mb-2.5" (ionSlideDidChange)="getInfo()">
+        <ion-slide (load)="siderPage=1" >
+          <div class="flex flex-col">
+            <div class="flex flex-col">
+              <img alt="Exit.svg" class="object-fill"
+                   src="../../../assets/bs-image-1.svg"/>
+            </div>
+          </div>
+        </ion-slide>
+        <ion-slide (load)="siderPage=2" >
+          <div class="flex flex-col">
+
+            <div class="flex flex-col px-1.5">
+              <img alt="Exit.svg" class="object-fill"
+                   src="../../../assets/bs-image-2.svg"/>
+            </div>
+
+
+          </div>
+        </ion-slide>
+
+        <ion-slide (change)="siderPage=3">
+          <div class="flex flex-col">
+
+            <div class="flex flex-col px-1.5">
+              <img alt="Exit.svg" class="object-fill"
+                   src="../../../assets/bs-image-3.svg"/>
+            </div>
+          </div>
+        </ion-slide>
+
+        <ion-slide>
+
+          <div class="flex flex-col">
+            <div class="flex flex-col ">
+              <img alt="Exit.svg" class="object-fill"
+                   src="../../../assets/bs-image-4.svg"/>
+            </div>
+          </div>
+        </ion-slide>
+
+        <ion-slide>
+          <div class="flex flex-col">
+            <div class="flex flex-col px-3.5">
+              <img alt="Exit.svg" class="object-fill"
+                   src="../../../assets/bs-image-5.png"/>
+            </div>
+          </div>
+        </ion-slide>
+      </ion-slides>
+      <div class="mt-2.5">
+
+        <div *ngIf="siderPage===0">
+          <div class="flex flex-col items-center justify-center grow text-regular-15px">
+            <div class="m-auto whitespace-pre-warp  grow">
+              <ul class="list-disc list-inside">
+                <li>Wear simple & close-fitting<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clothes</li>
+                <li>Tie up your long hair & show<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;your neck</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div *ngIf="siderPage===1">
+          <div class="flex flex-col items-center justify-center grow text-regular-15px">
+            <div class="m-auto whitespace-pre-warp  grow">
+              <ul class="list-disc list-inside">
+                <li>Keep your device vertical</li>
+                <li>3-5 meters between the device<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and subjects</li>
+                <li>Locate at the waist level</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+        <div *ngIf="siderPage===2">
+          <div class="flex flex-col items-center justify-center grow text-regular-15px">
+            <div class="m-auto whitespace-pre-warp  grow">
+              <ul class="list-disc list-inside">
+                <li>Make sure the subjects' body<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;is inside the camera</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div *ngIf="siderPage===3">
+          <div class="flex flex-col items-center justify-center grow text-regular-15px">
+            <div class="m-auto whitespace-pre-warp  grow">
+              <ul class="list-disc list-inside">
+                <li>Open your arms around 15-30°</li>
+                <li>Make a fist</li>
+                <li>Keep your feet around<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shoulder-width</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div *ngIf="siderPage===4">
+          <div class="flex flex-col items-center justify-center grow text-regular-15px">
+            <div class="m-auto whitespace-pre-warp  grow">
+              <ul class="list-disc list-inside">
+                <li>Turn left 90 degree & arm drop<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;naturally to your sides</li>
+                <li>Tiptoes facing forward and look<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ahead</li>
+              </ul>
+            </div>
+          </div>
+
+          <div>
+            <div class="button-text button-align items-center justify-center">
+              <ion-button class="button-secondary-bg" (click)="cancel()">Get Started</ion-button>
+<!--              <img (click)="cancel()" src="assets/button/getStartedBtn.svg" class="m-1.5 p-10">-->
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+  </div>
+
+</ion-content>
+
+

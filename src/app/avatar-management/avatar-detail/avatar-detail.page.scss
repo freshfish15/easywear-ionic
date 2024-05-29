@@ -1,0 +1,204 @@
+//controller of big avatar
+.avatar {
+  position: relative;
+  top: 5%;
+  left: 5%;
+  height: 57vh;
+}
+
+//controller of buttons
+#switchSet{
+  --background: transparent;
+}
+
+#scrollDown {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  right: 5%;
+}
+#cm {
+  position: relative;
+  height: 5vh;
+  width: 15vw;
+  color: #FFFFFF;
+  border-radius: 5vw 0px 0px 5vw;
+  font-size: 12px;
+}
+
+#inch {
+  position: relative;
+  height: 5vh;
+  width: 15vw;
+  color: #FFFFFF;
+  border-radius: 0px 5vw 5vw 0px;
+  font-size: 12px;
+}
+#userDetail{
+  --background: transparent;
+  font-size: 15px;
+  color: #FFFFFF
+}
+
+//controller of right lists
+#bodyList {
+  position: absolute;
+  width: 50vw;
+  height: 70vh;
+
+  right: 0;
+  top: 0;
+  padding: 0;
+  background: transparent;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.rows {
+  position: relative;
+  background: #FFFFFF;
+  margin-right: 0;
+  margin-left: auto;
+  width: 7vh;
+  height: 7vh;
+}
+
+.images {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+//controller of fab buttons
+.fabButtons{
+  position: relative;
+  width: 7vh;
+  height: 7vh;
+}
+#arrowContainer{
+  position: relative;
+  width: 3vh;
+  height: 100%;
+
+  border-radius: 1vh 0 0 1vh;
+  background: rgba(108, 106, 235, 0.5);
+}
+#arrow{
+  position: absolute;
+  margin-bottom: auto;
+  margin-top: auto;
+  top: 0;
+  bottom: 0;
+}
+#textContainer{
+  position: relative;
+  height: 100%;
+  width: 12vh;
+  color: #FFFFFF;
+  background: rgba(242, 242, 242, 0.5);
+  text-align: center;
+  align-items: center;
+  display: flex;
+}
+#text{
+  position: relative;
+  padding-left: 5px;
+  font-size: calc(1vh + 1vw);
+}
+#jumpList{
+  margin-right: 6vh;
+}
+#jumpText{
+  position: relative;
+  width: 15vh;
+  height: 7vh;
+  background: transparent;
+}
+ion-fab-button::part(native) {
+  background: transparent;
+  // background-color: #FFFFFF;
+  border-radius: 0px;
+}
+
+@media (min-width:700px) {
+  .avatar-Bg {
+    position: relative;
+    left: 10vw;
+  }
+
+  #switchSet{
+    --background: transparent;
+    top: 3vh;
+  }
+  #cm {
+    position: relative;
+    height: 5vh;
+    width: 15vw;
+    color: #FFFFFF;
+    border-radius: 5vw 0px 0px 5vw;
+    font-size: 12px;
+    left: 9vw;
+  }
+
+  #inch {
+    position: relative;
+    height: 5vh;
+    width: 15vw;
+    color: #FFFFFF;
+    border-radius: 0px 5vw 5vw 0px;
+    font-size: 12px;
+    left: 9vw;
+  }
+
+  #userDetail{
+    --background: transparent;
+    font-size: calc(1.5vh + 1vw);
+    left: 8vw;
+    top: 3vh;
+  }
+
+  #scrollDown {
+    position: absolute;
+    height: 3.5vh;
+    width: 3.5vh;
+    top: 2vh;
+    right: 3%;
+  }
+}
+
+//Old code//
+//#header {
+//  color: #FFFFFF;
+//  font-size: calc(2vh + 1vw);
+//}
+
+//#deleteButton {
+////  position: relative;
+////  --background: transparent;
+////  border-width: 1px;
+////  border-radius: 3vh;
+////
+////  margin-top:1vh ;
+////  width: 50vw;
+////  height: 5vh;
+////  font-size: calc(1.5vh + 1vw);
+////}
+
+//controller of toolbar icons
+//#downloadContainer{
+//  width: 5vh;
+//  height: 5vh;
+//}
+//#editContainer{
+//  width: 5vh;
+//  height: 5vh;
+//}
+//#download{
+//  width: 100%;
+//  height: 100%;
+//}
+//#edit{
+//  width: 100%;
+//  height: 100%;
+//}

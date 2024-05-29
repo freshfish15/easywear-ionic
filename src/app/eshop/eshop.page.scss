@@ -1,0 +1,41 @@
+ion-button.circleButton{
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  height:55px;
+  width:55px;
+  overflow: visible!important;
+}
+
+ion-badge {
+   --background: #000;
+   --color: white;
+   border-radius: 100%;
+   position: absolute;
+   top: 0px;
+   right: -8px;
+  width: 20px;
+
+}
+
+.floatingbar {
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  z-index: 100;
+  position: fixed;
+  border-radius: 45px;
+  height: 60px;
+  margin: auto;
+  margin-bottom: 3vh;
+  width: 80vw;
+
+  ion-label{
+    font-family: MontserratMedium;
+    font-size: calc(8px + 1vw);
+  }
+}
+
+.filter-orange {
+  filter: invert(50%) sepia(95%) saturate(3615%) hue-rotate(349deg) brightness(95%) contrast(93%);
+}

@@ -1,0 +1,96 @@
+
+
+<ion-content>
+  <ion-toolbar class="header-toolbar">
+    <ion-button fill="none" routerLink="/avatar" >
+      <ion-icon size="large" color="light" src="/assets/custom-icons/ew-back.svg"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+
+<div *ngIf="!finishCapture">
+  <div class="cameraPreview " id="cameraPreview">
+    <div *ngIf="cameraActive" style="z-index:1;">
+      <div class="image-overlay">
+        <div class="test" style="background: transparent">
+          <div class="text-center text-semibold-15px" style="color: #fff; margin-top: 20px;" >
+            Front View
+          </div>
+<!--          <img class="takephotoBtn" (click)="captureImage()" src="assets/button/takePhotoBtn.svg">-->
+        </div>
+      </div>
+
+      <div>
+        <img class="guidelineimg" src="assets/guildeline-3.png">
+      </div>
+        <div class="camera-view-footer">
+<!--          <div *ngIf="!isPhoneVertical">-->
+<!--            <div class="vertical-line" [style.transform]="'rotate(' + this.RotationXAngle + 'deg)'" [style.background-color]=this.lineColor></div>-->
+<!--            <div class="horizontal-line" [style.transform]="'translateY(' + this.ZLinePosition +'px)  scaleX('+ this.ZLineLength +')'"> </div>-->
+<!--            <br>-->
+<!--            <div class="vertical-line" [style.transform]="'rotate(' + this.RotationXAngle + 'deg)'" [style.background-color]=this.lineColor></div>-->
+<!--          </div>-->
+
+<!--          <div *ngIf="isPhoneVertical">-->
+          <ion-row>
+            <ion-col></ion-col>
+            <ion-col>
+              <img  class="capturebtn" (click)="captureImage()" src="assets/button/takePhotoBtn.svg">
+            </ion-col>
+
+            <ion-col>
+              <ion-button fill="clear" class="ion-no-padding">
+                <ion-icon color="light" slot="icon-only" name="images"></ion-icon>
+              </ion-button>
+            </ion-col>
+          </ion-row>
+          </div>
+        </div>
+
+    </div>
+  </div>
+<!--</div>-->
+
+
+<!--<div *ngIf="finishCapture">-->
+<!--  <div class="flex flex-col grow items-center justify-center h-70v">-->
+<!--    <img [src]="image" class="cameraPreview ">-->
+<!--    <div class="overlay">-->
+<!--      <div class="my-0.5 truncate  px-2.5 font-bold text-center titleText mt-2.5">-->
+<!--        CAPTURE COMPLETE-->
+<!--      </div>-->
+<!--      <div class="h-60v"></div>-->
+<!--      <div class="flex flex-row grow items-center justify-center">-->
+<!--        <img (click)="refresh()" src="assets/button/retakePhotoBtn.svg">-->
+<!--        <img routerLink="/avatar" src="assets/button/nextBtn.svg">-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+  <div *ngIf="finishCapture">
+
+    <div class="bg-color">
+      <div style="background-color:transparent; height: 30px" class="overlay text-semibold-15px text-center">
+        CAPTURE COMPLETE
+      </div>
+
+      <img [src]="image" class="cameraPreview">
+      <div class="camera-view-footer-after">
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <ion-button (click)="refresh()" class="button-text button-white-outline">Retake</ion-button>
+            </ion-col>
+            <ion-col>
+              <ion-button (click)="generateAvatar()" class="button-text button-secondary-bg">Confirm</ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </div>
+  </div>
+</ion-content>
+
+
+
+

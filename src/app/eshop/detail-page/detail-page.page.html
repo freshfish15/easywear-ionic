@@ -1,0 +1,150 @@
+<ion-header class="bg-color ion-no-border">
+  <ion-toolbar style="padding:0 20px" class="header-toolbar">
+    <ion-buttons slot="start"><ion-button>
+      <ion-back-button text="" color="light" icon="/assets/custom-icons/ew-back.svg"></ion-back-button>
+    </ion-button></ion-buttons>
+    <ion-title class="ion-text-center header-title">Product Detail</ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/setting"> <ion-icon color="light" size="large" src="/assets/custom-icons/ew-setting.svg"></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <div class=" flex flex-col">
+    <div class="items-start justify-start">
+      <div class="flex flex-row justify-end items-end mt-5 mr-5">
+<!--        <a (click)="cancel()">-->
+<!--          &lt;!&ndash;          <img alt="Exit.svg" class="object-scale-down filter-white"&ndash;&gt;-->
+<!--          &lt;!&ndash;                                    src="assets/button/Exit.svg"/>&ndash;&gt;-->
+<!--          <ion-icon size="large"  color="light" src="/assets/custom-icons/ew-close.svg"></ion-icon>-->
+<!--        </a>-->
+      </div>
+    </div>
+
+      <p style="color: #FFFFFF; text-align: center" class="text-semibold-15px"  >{{productData.name}}</p>
+    <br>
+
+    <div class="flex justify-center items-center ion-no-padding " >
+      <div class="flex justify-center items-center item-detail-bg">
+                <img src="{{this.productData.image_path}}">
+      </div>
+    </div>
+    <div class="items-end">
+      <div class="flex flex-col mx-5">
+
+        <!--        <div class="flex flex-row p-1.5">-->
+        <!--          <a class="btn" [ngClass]="{'btnSelected' : colorSelected===0}" (click)="selectColor(0)">-->
+        <!--            <span style="background: #80BFC0;"></span>-->
+        <!--          </a>-->
+        <!--          <a class="btn" [ngClass]="{'btnSelected' : colorSelected===1}" (click)="selectColor(1)">-->
+        <!--            <span style="background: #DA3B3B;"></span>-->
+        <!--          </a>-->
+        <!--          <a class="btn" [ngClass]="{'btnSelected' : colorSelected===2}" (click)="selectColor(2)">-->
+        <!--            <span style="background: #FFF2AF;"></span>-->
+        <!--          </a>-->
+        <!--        </div>-->
+      </div>
+
+<!--      <div class="button-align" *ngIf="!tempAddtoBag">-->
+<!--        <ion-button (click)="addToBag()" class="button-text button-white-outline" shape="round" fill="outline" >-->
+<!--          <ion-icon size="large" slot="start" src="/assets/custom-icons/ew-bag.svg"></ion-icon>-->
+<!--          <p class="button-text">Add to Bag</p>-->
+<!--        </ion-button>-->
+<!--      </div>-->
+
+<!--      <div class="button-align" *ngIf="tempAddtoBag">-->
+<!--        <ion-button (click)="addToBag()" class="button-text button-secondary-bg" shape="round" fill="outline">-->
+<!--          <ion-icon  size="large" slot="start" src="/assets/custom-icons/ew-bag.svg"></ion-icon>-->
+<!--          <p class="button-text">Added to Bag</p>-->
+<!--        </ion-button>-->
+<!--      </div>-->
+
+      <div class="button-align">
+        <ion-button (click)="addToFittingRoom()" class="button-text button-white-outline" shape="round" >
+          <ion-icon size="large" slot="start" src="/assets/custom-icons/ew-hanger.svg"></ion-icon>
+          <p class="button-text">Add to Fitting Room</p>
+        </ion-button>
+      </div>
+
+<!--      <div class="button-align" *ngIf="inShoppingCart()">-->
+<!--        <ion-button (click)="removeFromFittingRoom()" class="button-text button-secondary-bg" shape="round" fill="outline">-->
+<!--          <p class="button-text">Remove from Fitting Room</p>-->
+<!--        </ion-button>-->
+<!--      </div>-->
+
+      <!--      <div class="flex flex-col">-->
+      <!--        <div *ngIf="!inShoppingCart()"  class="flex flex-row items-center justify-center p-1.5">-->
+      <!--          <a (click)="addToFittingRoom()"><img alt="AddtoFittingRoomBtn.svg" class="object-scale-down"-->
+      <!--                                               src="assets/button/AddtoFittingRoomBtn.svg"/></a>-->
+      <!--        </div>-->
+      <!--        <div *ngIf="inShoppingCart()" class="flex flex-row items-center justify-center p-1.5">-->
+      <!--          <a (click)="removeFromFittingRoom()"><img alt="RemovefromFittingRoomBtn.svg" class="object-scale-down"-->
+      <!--                                                    src="assets/button/RemovefromFittingRoomBtn.svg"/></a>-->
+      <!--        </div>-->
+      <!--      </div>-->
+    </div>
+  </div>
+</ion-header>
+
+<ion-content class="bg-color">
+  <div class="flex flex-col">
+    <hr>
+    <div class="">
+
+      <div class="grid grid-cols-4 gap-4 m-5 mb-10">
+        <div class="col-span-2">
+          <p class="text-semibold-15px">Designer/Brand: {{productData.brand}}</p>
+<!--          <p class="text-regular-12px">{{productData.brand}}</p>-->
+        </div>
+
+        <div class="col-span-2">
+          <p class="text-semibold-15px">Price: {{productData.price}}</p>
+        </div>
+
+<!--        <div class="col-span-2 flex justify-end">-->
+<!--          <img alt="test_logo.svg" class="object-scale-down mx-1 " src="assets/test_logo.svg"/>-->
+<!--        </div>-->
+
+        <div class="col-span-4">
+          <p class="text-semibold-15px">Product Description</p>
+
+          <br class="mx-5.0">
+
+          <p class="text-semibold-15px">{{productData.description}}</p>
+
+          <br>
+
+          <!--          <p class="text-regular-12px">The top is flawlessly crafted with the modern femme in mind. It's cut for a-->
+          <!--              regular fit with romantic flared hem-->
+          <!--          </p>-->
+
+        </div>
+        <div class="col-span-4">
+<!--          <p class="text-semibold-15px">Shop this product {{this.brand}}</p>-->
+
+          <a href="http://www.artofficial.com">
+            <p class="text-regular-12px">http://www.artofficial.com/</p>
+          </a>
+        </div>
+<!--        {{this.productData.description}}-->
+      </div>
+
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <div style="margin-left: 20px">
+      <div class="item-start ">
+        <a href="https://www.instagram.com/givenchy/">
+          <ion-icon alt="Instagram.svg" size="large"  color="light" src="/assets/custom-icons/ew-instagram.svg"></ion-icon>
+        </a>
+        <a href = "mailto: abc@example.com">
+          <ion-icon alt="email.svg" size="large"  color="light" src="/assets/custom-icons/ew-email.svg"></ion-icon>
+        </a>
+        <a href = "https://wa.me/85212345678">
+          <ion-icon alt="message.svg" size="large"  color="light" src="/assets/custom-icons/ew-whatsapp.svg"></ion-icon>
+        </a>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-footer>

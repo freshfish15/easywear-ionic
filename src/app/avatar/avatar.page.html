@@ -1,0 +1,183 @@
+<!--header part-->
+<ion-header class="ion-no-border">
+  <ion-toolbar style="padding:0 20px" class="header-toolbar">
+    <ion-buttons slot="start"><ion-button>
+      <ion-back-button text="" color="light" icon="/assets/custom-icons/ew-back.svg"></ion-back-button>
+    </ion-button></ion-buttons>
+    <ion-title class="ion-text-center header-title">CREATE AVATAR</ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/setting"> <ion-icon color="light" size="large" src="/assets/custom-icons/ew-setting.svg"></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<!--class="basis-1/2 content-center justify-center items-center"-->
+<!--  <div class="flex flex-col ">-->
+<!--    <div class="flex flex-row text-input-list">-->
+<!--&lt;!&ndash;      flex flex-row px-12 pt-5&ndash;&gt;-->
+<!--      <div>-->
+<!--        <a (click)="avatarM()">-->
+<!--          <ion-button class="button-selected button-text" *ngIf="!isFemale">Male</ion-button>-->
+<!--          <ion-button class="button-option button-text" *ngIf="isFemale">Male</ion-button>-->
+<!--        </a>-->
+<!--      </div>-->
+
+<!--      <div>-->
+<!--        <a (click)="avatarF()">-->
+<!--          <ion-button class="button-option button-text" *ngIf="!isFemale">Female</ion-button>-->
+<!--          <ion-button class="button-selected button-text" *ngIf="isFemale">Female</ion-button>-->
+<!--        </a>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+
+  <ion-content [scrollY]="false" class="bg-color">
+    <div class="ion-padding input-list">
+<!--      <div style="width:50%;margin-left: 30%" class="flex flex-col">-->
+<!--        <div class="flex flex-row justify-center items-center">-->
+<!--          <div>-->
+<!--            <a (click)="avatarM()">-->
+<!--              <ion-button class="button-selected button-text" *ngIf="!isFemale">Male</ion-button>-->
+<!--              <ion-button class="button-option button-text" *ngIf="isFemale">Male</ion-button>-->
+<!--            </a>-->
+<!--          </div>-->
+
+<!--          <div>-->
+<!--            <a (click)="avatarF()">-->
+<!--              <ion-button class="button-option button-text" *ngIf="!isFemale">Female</ion-button>-->
+<!--              <ion-button class="button-selected button-text" *ngIf="isFemale">Female</ion-button>-->
+<!--            </a>-->
+<!--          </div>-->
+<!--        </div>-->
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6" >
+          <a (click)="avatarM()">
+          <ion-button class="button-selected button-text" *ngIf="!isFemale">Male</ion-button>
+          <ion-button class="button-option button-text" *ngIf="isFemale">Male</ion-button>
+          </a></ion-col>
+        <ion-col size="6">
+          <a (click)="avatarF()">
+          <ion-button class="button-option button-text" *ngIf="!isFemale">Female</ion-button>
+          <ion-button class="button-selected button-text" *ngIf="isFemale">Female</ion-button>
+         </a></ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-item lines="none" class="input-style ion-margin-horizontal ion-margin-bottom">
+      <ion-input  mode="ios" id="avatarNameInput" required="true" clearInput="true" placeholder="Avatar Name" [(ngModel)]="AvatarName"></ion-input>
+    </ion-item>
+
+    <ion-item lines="none" class="input-style ion-margin-horizontal ion-margin-bottom">
+      <ion-input (click)="openHeightPicker()" id="heightInput" placeholder="Height(cm)" [value]="avatarHeight"></ion-input>
+    </ion-item>
+
+    <ion-item lines="none" class="input-style ion-margin-horizontal ion-margin-bottom">
+      <ion-input (click)="openWeightPicker()" id="weightInput" placeholder="Weight(kg)" [value]="avatarWeight"></ion-input>
+    </ion-item>
+    </div>
+
+<!--    <div class="flex flex-col p-5 content-center justify-center items-center">-->
+<!--      <ion-input class="textbox my-3.5 innerInput" color="primary" id="avatarNameInput" placeholder="Avatar Name"></ion-input>-->
+<!--      <ion-input (click)="openHeightPicker()" color="primary" class="input textbox my-3.5 innerInput" id="heightInput" placeholder="Height(cm)" [value]="avatarHeight"-->
+<!--                 ></ion-input>-->
+<!--      <ion-input (click)="openWeightPicker()" color="primary" class="input textbox my-3.5 innerInput" id="weightInput" placeholder="Weight(kg)" [value]="avatarWeight"-->
+<!--                 ></ion-input>-->
+<!--    </div>-->
+<!--    <div class="flex flex-col px-20 mt-16 content-center justify-center items-center">-->
+<!--      <div class="flex flex-row">-->
+<!--        <img   routerLink="/avatar-capture-camera-face" src="assets/button/createByCapturingBtn.svg" class="">-->
+<!--        <img (click)="openFaceScanning()" src="assets/button/Question.svg" class="m-1.5">-->
+<!--      </div>-->
+<!--      <div class="flex flex-row mt-2.5">-->
+<!--      <img routerLink="/avatar-capture-entering-data" src="assets/button/createByEnteringDataBtn.svg" class="">-->
+<!--        <img (click)="openEnteringData()" src="assets/button/Question.svg" class="m-1.5">-->
+<!--      </div>-->
+<!--    </div>-->
+
+    <div class="button-align">
+      <ion-button (click)="openFaceScanning()"  fill="outline" class="button-white-outline" shape="round">
+        <p class="button-text">Create by capturing</p>
+      </ion-button>
+      <ion-button (click)="openFaceScanning()" fill="none" style="height: 20px">
+      <ion-icon  size="large" src="assets/custom-icons/ew-question.svg"></ion-icon>
+        <p class="text-moredetail">See guideline</p>
+      </ion-button>
+      <ion-button (click)="openEnteringData()" fill="outline" class="button-white-outline button-text" shape="round">
+        Create by entering data
+      </ion-button>
+
+      <ion-button (click)="openEnteringData()" fill="none" style="height: 20px">
+        <ion-icon  size="large" src="assets/custom-icons/ew-question.svg"></ion-icon>
+        <p class="text-moredetail">See guideline</p>
+      </ion-button>
+    </div>
+  </ion-content>
+
+<!--  <ion-modal class="modal-test"-->
+<!--             trigger="open-facescanning"-->
+<!--             [initialBreakpoint]="0.85"-->
+<!--             [breakpoints]="[0, 0.25, 0.5, 0.85]"-->
+<!--             handleBehavior="cycle"-->
+<!--  >-->
+<!--    <ng-template>-->
+<!--      <ion-header class="ion-no-border">-->
+<!--        <ion-toolbar style="padding:0 20px" class="header-toolbar">-->
+<!--          <ion-buttons slot="start">-->
+<!--            <ion-button><ion-icon></ion-icon></ion-button>-->
+<!--          </ion-buttons>-->
+<!--          <ion-title class="ion-text-center header-title">Create by capturing</ion-title>-->
+<!--          <ion-buttons slot="end" >-->
+<!--            <ion-button (click)="cancel()"><ion-icon size="large" src="/assets/custom-icons/ew-close.svg"></ion-icon></ion-button>-->
+<!--          </ion-buttons>-->
+<!--        </ion-toolbar>-->
+<!--      </ion-header>-->
+
+<!--      <ion-content class="ion-padding">-->
+
+<!--        <div class="flex items-center justify-center grow">-->
+<!--          <ion-slides pager="false" [options]="slideOpts" class="guideline-img">-->
+<!--            <ion-slide >-->
+
+<!--              <div class="flex flex-col">-->
+<!--                <img alt="Exit.svg" -->
+<!--                     src="/assets/guildeline-1.png"/>-->
+<!--              </div>-->
+
+<!--            </ion-slide>-->
+<!--            <ion-slide >-->
+
+<!--              <div>-->
+<!--                <img alt="Exit.svg"-->
+<!--                     src="/assets/guildeline-2.png"/>-->
+<!--              </div>-->
+
+<!--            </ion-slide>-->
+<!--            <ion-slide >-->
+
+<!--              <div class="flex flex-col">-->
+<!--                <img alt="Exit.svg"-->
+<!--                     src="/assets/guildeline-3.png"/>-->
+<!--              </div>-->
+
+<!--            </ion-slide>-->
+<!--          </ion-slides>-->
+<!--        </div>-->
+
+<!--&lt;!&ndash;        <div class="mx-2.5 px-4.5 whitespace-pre-warp text-center grow" style="font-size: 15px">&ndash;&gt;-->
+<!--        <div class="ion-padding text">-->
+<!--          Create your own real-size avatar with your face by capturing your face and body.-->
+<!--        </div>-->
+<!--&lt;!&ndash;        <div class="flex flex-row content-center justify-center items-center grow">&ndash;&gt;-->
+
+<!--&lt;!&ndash;          <img alt="goItBtn.svg" (click)="cancel()"  src="assets/button/gotItBtn.svg" class="">&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--        <div class="button-align">-->
+<!--          <ion-button alt="goItBtn.svg" (click)="cancel()" fill="outline" class="button-white-outline button-text" shape="round">-->
+<!--            Got it </ion-button>-->
+<!--        </div>-->
+<!--      </ion-content>-->
+<!--    </ng-template>-->
+<!--  </ion-modal>-->
+
+

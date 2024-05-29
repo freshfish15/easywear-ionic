@@ -1,0 +1,43 @@
+<!--header part-->
+<ion-header class="ion-no-border">
+  <ion-toolbar style="padding:0 20px" class="header-toolbar">
+    <ion-buttons slot="start"><ion-button>
+      <ion-back-button icon="/assets/custom-icons/ew-back.svg"></ion-back-button>
+    </ion-button></ion-buttons>
+    <ion-title class="ion-text-center header-title">FORGOT PASSWORD</ion-title>
+    <ion-buttons slot="end" >
+      <ion-button><ion-icon></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [scrollY]="false" [fullscreen]="true">
+  {{checkFill()}}
+  <div class="ion-text-center">
+    <p id="text1">Forgot your password?</p>
+    <p id="text2">Enter your e-mail address and we'll send you a link to reset your password.</p>
+  </div>
+<!--  <ion-item class="input-item" lines="none" style="top: 15vh;">-->
+<!--    <ion-label color="secondary" class="input-label" id="email" position="stacked">Email</ion-label>-->
+<!--    <ion-input class="input-inner" type="email" clearInput="true" id="emailInput" #email-->
+<!--    (keyup)="onKey($event)"> </ion-input>-->
+<!--  </ion-item>-->
+
+  <form [formGroup]="forgotForm" class="ion-padding text-input-list">
+  <p id="email" class="ion-margin-start ion-no-margin text-input-label">Email</p>
+  <ion-item mode="ios" lines="none" class="text-input-style ion-margin-horizontal ion-margin-bottom">
+    <ion-input formControlName="email" id="emailInput" clearInput="true" required="true" type="email" #email
+               (keyup)="onKey($event)"></ion-input>
+    <div slot="error" class="message">Invalid email</div>
+  </ion-item>
+  </form>
+
+  <div class="button-align">
+    <ion-button class="button-secondary-bg" id="reset" expand="block" shape="round" [routerLink]="['./send', email.value]">
+      <p class="button-text"> Reset Password</p>
+    </ion-button>
+    <ion-button class="button-secondary-bg"  expand="block" shape="round" [routerLink]="['../signin']">
+      <p class="button-text">Back to Sign in</p>
+    </ion-button>
+  </div>
+</ion-content>

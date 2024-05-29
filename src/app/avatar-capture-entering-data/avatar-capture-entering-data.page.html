@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar color="easy_wear">
+    <div class="flex flex-row mx-5 mt-5 content-center justify-center items-center">
+      <div class="basis-1/6">
+        <img routerLink="/avatar" alt="back.svg" class="object-scale-down" src="../../assets/icon/back.svg"/>
+      </div>
+      <div class="basis-5/6">
+        <ion-text class="">
+          <h1 id="header" class="text-xl font-bold text-center">CREATE AVATAR</h1>
+        </ion-text>
+      </div>
+      <div class="basis-6/6" id="saveContainer">
+
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [scrollY]="false" style="--background: black;">
+  <img id="avatar" src="/assets/icon/FullCL.png" />
+  <img id="avatarBg" src="/assets/icon/editBg.png" />
+
+  <ion-list id="dataList">
+<!--    <ion-button class="pickButtons" fill="none" (click)="openPicker(0)">-->
+<!--      <div style="position: relative; margin: auto;">Height:</div>-->
+<!--      <div style="position: relative; margin: auto;">{{dataSet[0]}}</div>-->
+<!--      <div style="position: relative; margin: auto;">{{unit}}</div>-->
+<!--    </ion-button>-->
+<!--    <ion-button class="pickButtons" fill="none" (click)="openPicker(1)">-->
+<!--      <div style="position: relative; margin: auto;">Weight:</div>-->
+<!--      <div style="position: relative; margin: auto;">{{dataSet[1]}}</div>-->
+<!--      <div style="position: relative; margin: auto;">{{unit2}}</div>-->
+<!--    </ion-button>-->
+    <ion-button *ngFor="let item of items;" class="pickButtons" fill="none" (click)="openPicker(item.id)">
+      <div style="position: relative; margin: auto;">{{item.value}}</div>
+      <div style="position: relative; margin: auto;">{{dataSet[item.id]}}</div>
+      <div style="position: relative; margin: auto;">{{unit}}</div>
+    </ion-button>
+  </ion-list>
+
+  <ion-item lines="none" id="switchSet">
+    <ion-button fill="none" id="cm" (click)="switchCm()"> cm/kg </ion-button>
+    <ion-button fill="none" id="inch" (click)="switchInch()">
+      inch/lbs
+    </ion-button>
+  </ion-item>
+</ion-content>
+
+<ion-footer class="text-center">
+  <ion-toolbar style="min-height: 0;
+  top: 0; --background: #252856;">
+    <ion-button id="confirmButton" fill="none" (click)="onPostMeasureData()" >
+      Confirm
+    </ion-button>
+    <ion-button id="deleteButton" fill="none" (click)="deleteAlert()">
+      Cancel
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

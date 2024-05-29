@@ -1,0 +1,28 @@
+.settings-item{
+  --background:var(--ion-color-primary);
+  --border-color: #4949A0;
+  --color: #FFFFF;
+}
+
+.text-paragraph {
+  position: relative;
+  height: 100%;
+  width : 100%;
+
+  margin: auto;
+
+  font-family: MontserratRegular;
+  font-size: calc(8px + 1vw);
+  line-height: 20px;
+  text-align: justify;
+
+  color: #FFFFFF;
+}
+
+//ion-title{
+//    font-size: 20px;
+//    position: absolute;
+//    top: 10%;
+//}
+
+
