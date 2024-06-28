@@ -183,7 +183,7 @@ export class CreatePage implements OnInit {
       },
       (e : Error) => {
         // TODO: error handling
-
+        alert("Your username or email has been used. Please try another one.");
 
         // this.openModal();
       }
